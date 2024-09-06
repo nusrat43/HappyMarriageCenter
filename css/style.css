@@ -48,18 +48,22 @@ label{
 .header-inner {
     padding: 1em 0;
 }
-h1.logo {
+h1.logo img{
+	height: 160px;
+	width: 200px;
     float: left;
-    border-right: 10px solid rgba(255, 255, 255, 0.29);
-	border-bottom: 10px solid rgba(255, 255, 255, 0.29);
-    border-left: 10px solid rgba(68, 199, 244, 0.37);
-	border-top: 10px solid rgba(68, 199, 244, 0.37);
-    padding: 5px 5px;
-    position: relative;
-    font-size: 47px;
-    letter-spacing: 6px;
-    font-family: 'Dancing Script', cursive;
+   padding-top: 0;
+   margin-right: 5px;
 }
+@media (max-width:425px){
+	h1.logo img{
+		height: 100px;
+		width: 120px;
+		float: left;
+	   padding-top: 0;
+	   margin-right: 5px;
+	}}
+
 h1 span {
     color: #EA3621;
     display: block;
