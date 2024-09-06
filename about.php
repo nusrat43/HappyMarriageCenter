@@ -1,13 +1,7 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-<title>Elite Match a Matrimonial Category Bootstrap Responsive Website Template  | About :: W3layouts</title>
+<title> About :: HappyMarriageCenter</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
