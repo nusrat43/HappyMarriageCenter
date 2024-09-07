@@ -1,33 +1,33 @@
 <head>
-<title> About :: HappyMarriageCenter</title>
+	<title> About :: HappyMarriageCenter</title>
 
-<?php
-include 'header.php' ;
-?>
+	<?php
+	include 'header.php';
+	?>
 </head>
 <!-- breadcrumbs -->
 <div class="w3l_agileits_breadcrumbs">
-   <div class="container">
+	<div class="container">
 		<div class="w3l_agileits_breadcrumbs_inner">
 			<ul>
 				<li><a href="index.php">Home</a><span>&#187;</span></li>
-									
+
 				<li>Login</li>
-				</ul>
+			</ul>
 		</div>
 	</div>
 </div>
 <!-- //breadcrumbs -->
 <div class="login elite-app">
 	<div class="container">
-	<div class="tittle-agileinfo">
-				<h3>Login Now</h3>
-			</div>
-	<div class="col-md-8 login-form-w3-agile">
-			 <form action="#" method="post">
+		<div class="tittle-agileinfo">
+			<h3>Login Now</h3>
+		</div>
+		<div class="col-md-8 login-form-w3-agile">
+			<form method="post">
 				<div class="w3_form_body_grid">
-					<span>Name</span>
-					<input type="email" name="Email" placeholder="Email" required="">
+					<span>UserEmial</span>
+					<input type="email" name="Email" placeholder="Enter Your Email" required="">
 				</div>
 				<div class="w3_form_body_grid">
 					<span>Password</span>
@@ -44,7 +44,7 @@ include 'header.php' ;
 					</div>
 					<div class="clearfix"> </div>
 				</div>
-				<input type="submit" value="Sign In">
+				<input type="submit" name="submit">
 			</form>
 			<h4>Continue With</h4>
 			<div class="social_icons agileinfo_social_asd">
@@ -68,7 +68,7 @@ include 'header.php' ;
 		</div>
 		<div class="col-md-4 login-right-info">
 			<h3 class="subhead-agileits">Why Join Elite Match</h3>
-			<p class="para-agileits-w3layouts" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<p class="para-agileits-w3layouts">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 			<ul>
 				<li><i class="fa fa-check" aria-hidden="true"></i>Lorem ipsum</li>
 				<li><i class="fa fa-check" aria-hidden="true"></i>Vivamus lacus</li>
@@ -79,8 +79,36 @@ include 'header.php' ;
 			<div class="sim-button button12"><a href="register.php">Register</a></div>
 		</div>
 	</div>
+
 </div>
+<?php
+             if(isset($_POST['submit']))
+             {
+               
+             include 'config.php';
+
+             $formusername=$_POST['Email'];
+             $formpassword=$_POST['Password'];
+
+             $sql="select * from login where Email='".$formusername."' and Password='".$formpassword;
+             $result=$conn->query($sql);
+             
+        
+             if($result->fetch_assoc())
+             {
+             
+             
+                echo "Correct username and password!";
+
+             }
+             else
+             {
+                echo "Wrong username or password!";
+             }
+            }
+         ?>
+
 <!--login-inner-->
 <?php
-include 'footer.php' ;
+include 'footer.php';
 ?>
