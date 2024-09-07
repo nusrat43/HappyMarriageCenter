@@ -90,15 +90,17 @@
              $formusername=$_POST['Email'];
              $formpassword=$_POST['Password'];
 
-             $sql="select * from login where Email='".$formusername."' and Password='".$formpassword;
+             $sql="select * from login where Email='".$formusername."' and Password='".$formpassword."'";
              $result=$conn->query($sql);
              
         
              if($result->fetch_assoc())
              {
              
-             
-                echo "Correct username and password!";
+				echo "<script>
+				alert('You have Login successfully!'); 
+				  window.location='index.php'; 
+			   </script>";
 
              }
              else
