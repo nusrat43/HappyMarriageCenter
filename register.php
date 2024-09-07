@@ -46,10 +46,10 @@
 					<span>Gender</span>
 					<div class="w3_gender">
 						<div class="colr ert">
-							<label class="radio"><input type="radio" name="Gender" checked="" value="Male"><i></i>Male</label>
+							<label class="radio"><input type="radio" name="Gender" checked="" value="Male">Male</label>
 						</div>
 						<div class="colr">
-							<label class="radio"><input type="radio" name="Gender" value="Female"><i></i>Female</label>
+							<label class="radio"><input type="radio" name="Gender" value="Female">Female</label>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
