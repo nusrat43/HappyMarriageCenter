@@ -104,7 +104,7 @@
 					<span>Password</span>
 
 					<div style="display: flex; align-items: center;"  >
-						<input type="password" placeholder="Password" style="flex: 1;" id="pass">
+						<input type="password" placeholder="Password" style="flex: 1;" id="pass" name="Password">
 						<img  onclick="visible()"  style="margin-left: -25px; margin-bottom :6px;" id="eye" src="images/eye-solid.svg"></img>
 					</div>
 				</div>

@@ -87,13 +87,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					if (isset($_SESSION['Email'])) {
 						include 'config.php';
 						$Email=$_SESSION['Email'];
-						$sql = "select Name from register where Email= '$Email'";
+						$sql = "select Profile_Pic from register where Email= '$Email'";
 						$result = $conn->query($sql);
 						$row = $result->fetch_assoc();
-						$name = $row['Name'];
-						$id = $row['Name'];
+						$fliename = $row['Profile_Pic'];
 						echo "<li class='dropdown menu__item'>
-								<a href='#' class='dropdown-toggle menu__link' data-toggle='dropdown' data-hover='Pages' role='button' aria-haspopup='true' aria-expanded='false'>$name<span class='caret'></span></a>
+								<a href='#' id='profile' class='dropdown-toggle menu__link' data-toggle='dropdown' data-hover='Pages'><img style='border-radius:50%;height:60px; width:60px;' src='$fliename'> </a>
 								<ul class='dropdown-menu'>
 								<li><a href='self-Profile.php'>View Your Profile</a></li>
 									<li><a href='edit.php'>Edit Your Profile</a></li>
