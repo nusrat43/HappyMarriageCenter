@@ -20,7 +20,7 @@
    include 'config.php';
    $Email=$_SESSION['Email'];
 
-   $sql = "SELECT  `Profile_For`, `Name`, `Gender`, `D_O_B`, `Religion`, `Country` FROM `register` where Email= '$Email'";
+   $sql = "SELECT  `Profile_For`, `Name`, `Gender`, `D_O_B`, `Religion`, `Country`,`Profile_Pic` FROM `register` where Email= '$Email'";
    $result = $conn->query($sql);
    $row = $result->fetch_assoc();
    $profile_For = $row['Profile_For'];
@@ -29,7 +29,7 @@
    $D_O_B = $row['D_O_B'];
    $religion = $row['Religion'];
    $country = $row['Country'];
-
+$fliename = $row['Profile_Pic']
 ?>
 <div class="matches elite-app">
 	<div class="container">
@@ -37,9 +37,9 @@
 		<h3><?php echo $name?></h3>
 	</div>
 	<div class="matches-main-agileinfo">
-		<!-- <div class="col-md-6 profile1"> 
-			
-		</div> -->
+		<div class="col-md-6 profile1"> 
+			<img src="<?php echo $fliename ?>" alt="" style="height:60%;width:100%">
+		</div>
 		<div class="col-md-6 person-info-agileits-w3layouts">
 			<ul>
 				<li><span>Profile For</span><?php echo $profile_For ?></li>

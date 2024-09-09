@@ -151,6 +151,23 @@ ul.nav.navbar-nav.navbar-right li:nth-child(6) a {
 	-moz-transition: all 0.5s;
 	-o-transition: all 0.5s;
 }
+#profile {
+    font-size: 17px;
+    color: #fff;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+	transition: all 0.5s;
+	padding : 0;
+	margin-right: 30px;
+	margin-top: -8px;
+	border: none;
+	background:none ;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
 .header-right-w3ls a:hover {
     background: rgba(255, 255, 255, 0.13);
 }
@@ -1823,10 +1840,11 @@ ul.resp-tabs-list {
     min-height: 330px;
     width: 25%;
     margin-right: 2em;
+	
 }
-.profile1 {
+/* .profile1 {
     background: url(../images/p1.jpg) no-repeat 0px 0px;
-}
+} */
 .profile2 {
     background: url(../images/p2.jpg) no-repeat 0px 0px;
 }
