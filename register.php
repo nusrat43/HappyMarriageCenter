@@ -162,7 +162,48 @@
 <?php
 include 'config.php';
 
+
 if (isset($_POST['submit'])) {
+
+	 /////////////////Phot Upload Code
+
+	 $target_dir = "uploads/"; // Specify the directory where the file will be uploaded
+	 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	 $uploadOk = 1;
+	 $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+	 // Check if file already exists
+	 if (file_exists($target_file)) {
+		echo "Sorry, file already exists.";
+		$uploadOk = 0;
+	 }
+
+	 // Check file size (limit to 5MB)
+	 if ($_FILES["fileToUpload"]["size"] > 5000000) {
+		echo "Sorry, your file is too large.";
+		$uploadOk = 0;
+	 }
+
+	 // Allow certain file formats
+	 $allowedTypes = array("jpg", "png", "jpeg", "gif");
+	 if (!in_array($fileType, $allowedTypes)) {
+		echo "Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed.";
+		$uploadOk = 0;
+	 }
+
+	 // Check if $uploadOk is set to 0 by an error
+	 if ($uploadOk == 0) {
+		echo "Sorry, your file was not uploaded.";
+	 } else {
+		// If everything is ok, try to upload the file
+		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+		   echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+		} else {
+		   echo "Sorry, there was an error uploading your file.";
+		}
+	 }
+
+
 	$profile_for=$_POST['Profile_for'];
 	$name = $_POST['Name'];
 	$gender = $_POST['Gender'];
@@ -171,7 +212,7 @@ if (isset($_POST['submit'])) {
 	$country = $_POST['Country'];
 	$email = $_POST['Email']; //normal variable can be accessed only in one webpage
 	$password = $_POST['Password'];
-	$sql="INSERT INTO `register`(`Profile_For`, `Name`, `Gender`, `D_O_B`, `Religion`, `Country`, `Email`, `Password`) VALUES ('$profile_for','$name','$gender','$Date_of_birth','$religion','$country','$email','$password')";
+	$sql="INSERT INTO `register`(`Profile_For`, `Name`, `Gender`, `D_O_B`, `Religion`, `Country`, `Email`, `Password`) VALUES ('$profile_for','$name','$gender','$Date_of_birth','$religion','$country','$email','$password','$target_file')";
 	//echo  $sql;
 
 	
