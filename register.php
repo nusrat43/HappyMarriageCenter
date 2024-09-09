@@ -4,6 +4,21 @@
 	<?php
 	include 'header.php';
 	?>
+	<script>
+		let a = 1;
+
+		function visible() {
+			if (a == 1) {
+				document.getElementById("pass").type = "text";
+				document.getElementById("eye").src = "images/eye-slash-solid.svg";
+				a = 0;
+			} else {
+				document.getElementById("pass").type = "password";
+				document.getElementById("eye").src="images/eye-solid.svg";
+				a = 1;
+			}
+		}
+	</script>
 </head>
 <!-- breadcrumbs -->
 <div class="w3l_agileits_breadcrumbs">
@@ -85,7 +100,11 @@
 				</div>
 				<div class="w3_form_body_grid w3_form_body_grid1">
 					<span>Password</span>
-					<input type="password" name="Password" placeholder="Password" required="">
+
+					<div style="display: flex; align-items: center;"  >
+						<input type="password" placeholder="Password" style="flex: 1;" id="pass">
+						<img  onclick="visible()"  style="margin-left: -25px; margin-bottom :6px;" id="eye" src="images/eye-solid.svg"></img>
+					</div>
 				</div>
 				<input type="submit" value="Sign Up" name="submit">
 			</form>
@@ -137,15 +156,15 @@
 <?php
 include 'config.php';
 if (isset($_POST['submit'])) {
-	$profile_for=$_POST['Profile_for'];
+	$profile_for = $_POST['Profile_for'];
 	$name = $_POST['Name'];
 	$gender = $_POST['Gender'];
-	$Date_of_birth= $_POST['DOB'];
+	$Date_of_birth = $_POST['DOB'];
 	$religion = $_POST['Religion'];
 	$country = $_POST['Country'];
 	$email = $_POST['Email']; //normal variable can be accessed only in one webpage
 	$password = $_POST['Password'];
-	$sql="INSERT INTO `register`(`Profile_For`, `Name`, `Gender`, `D_O_B`, `Religion`, `Country`, `Email`, `Password`) VALUES ('$profile_for','$name','$gender','$Date_of_birth','$religion','$country','$email','$password')";
+	$sql = "INSERT INTO `register`(`Profile_For`, `Name`, `Gender`, `D_O_B`, `Religion`, `Country`, `Email`, `Password`) VALUES ('$profile_for','$name','$gender','$Date_of_birth','$religion','$country','$email','$password')";
 	//echo  $sql;
 
 	if ($conn->query($sql)) {

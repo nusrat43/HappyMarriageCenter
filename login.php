@@ -1,9 +1,25 @@
+
 <head>
 	<title> About :: HappyMarriageCenter</title>
 
 	<?php
 	include 'header.php';
 	?>
+	<script>
+		let a = 1;
+
+		function visible() {
+			if (a == 1) {
+				document.getElementById("pass").type = "text";
+				document.getElementById("eye").src = "images/eye-slash-solid.svg";
+				a = 0;
+			} else {
+				document.getElementById("pass").type = "password";
+				document.getElementById("eye").src="images/eye-solid.svg";
+				a = 1;
+			}
+		}
+	</script>
 </head>
 <!-- breadcrumbs -->
 <div class="w3l_agileits_breadcrumbs">
@@ -31,7 +47,10 @@
 				</div>
 				<div class="w3_form_body_grid">
 					<span>Password</span>
-					<input type="password" name="Password" placeholder="Password" required="">
+					<div style="display: flex; align-items: center;"  >
+						<input type="password" placeholder="Password" style="flex: 1;" id="pass" name="Password">
+						<img  onclick="visible()"  style="margin-left: -25px; margin-bottom :6px;" id="eye" src="images/eye-solid.svg"></img>
+					</div>
 				</div>
 				<div class="agile_remember">
 					<div class="agile_remember_left">
@@ -89,17 +108,17 @@
 
              $formusername=$_POST['Email'];
              $formpassword=$_POST['Password'];
-
              $sql="select * from login where Email='".$formusername."' and Password='".$formpassword."'";
              $result=$conn->query($sql);
              
         
-             if($result->fetch_assoc())
-             {
-             
+             if($row = $result->fetch_assoc())
+             {$name = $row['id'];
+				$_SESSION['Email'] = $formusername;
 				echo "<script>
 				alert('You have Login successfully!'); 
-				  window.location='index.php'; 
+				  window.location='index.php?id=$id'; 
+		    
 			   </script>";
 
              }

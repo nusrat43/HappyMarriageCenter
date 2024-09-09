@@ -75,6 +75,14 @@ h1.logo a {
 }
 /*-- //logo --*/
 /*-- top-nav --*/
+
+.edit {
+	width: 100% !important ;
+	float:none ;
+	padding-bottom: 20px;
+	border-radius: 3%;
+}
+
 .navbar-default {
     background: none;
     border: none;
@@ -777,7 +785,7 @@ img.img-responsive {
     background: #ffffff;
     color: #000;
 }
-.form-bg-w3ls input[type="submit"] {
+/* .form-bg-w3ls input[type="submit"] {
     background: rgba(255, 255, 255, 0);
     color: #ffffff;
     font-size: 13px;
@@ -789,15 +797,16 @@ img.img-responsive {
     letter-spacing: 1px;
     display: block;
     cursor: pointer;
-    -webkit-appearance: none;
+   
     padding: 10px 40px;
+	width: fit-content;
     font-family: 'Source Sans Pro', sans-serif;
     transition: .5s ease-in;
     -webkit-transition: .5s ease-in;
     -moz-transition: .5s ease-in;
     -o-transition: .5s ease-in;
     -ms-transition: .5s ease-in;
-}
+} */
 .form-bg-w3ls {
     padding: 3em 2em;
     width: 85%;
