@@ -1,3 +1,5 @@
+<?php  ?>
+
 <head>
 	<title> About :: HappyMarriageCenter</title>
 
@@ -39,7 +41,7 @@
 			<h3>Register Now</h3>
 		</div>
 		<div class="col-md-8 login-form-w3-agile">
-			<form method="post">
+			<form method="post" enctype="multipart/form-data">
 				<div class="w3_form_body_grid">
 					<span>Profile For</span>
 					<select id="w3_country" onchange="change_country(this.value)" class="frm-field required" name="Profile_for">
@@ -106,6 +108,10 @@
 						<img  onclick="visible()"  style="margin-left: -25px; margin-bottom :6px;" id="eye" src="images/eye-solid.svg"></img>
 					</div>
 				</div>
+				<div class="w3_form_body_grid w3_form_body_grid1">
+					<span>profile Photo</span>
+					<input type="file" name="fileToUpload"  required="">
+				</div>
 				<input type="submit" value="Sign Up" name="submit">
 			</form>
 			<h4>Continue With</h4>
@@ -155,8 +161,9 @@
 
 <?php
 include 'config.php';
+
 if (isset($_POST['submit'])) {
-	$profile_for = $_POST['Profile_for'];
+	$profile_for=$_POST['Profile_for'];
 	$name = $_POST['Name'];
 	$gender = $_POST['Gender'];
 	$Date_of_birth = $_POST['DOB'];
@@ -164,8 +171,11 @@ if (isset($_POST['submit'])) {
 	$country = $_POST['Country'];
 	$email = $_POST['Email']; //normal variable can be accessed only in one webpage
 	$password = $_POST['Password'];
-	$sql = "INSERT INTO `register`(`Profile_For`, `Name`, `Gender`, `D_O_B`, `Religion`, `Country`, `Email`, `Password`) VALUES ('$profile_for','$name','$gender','$Date_of_birth','$religion','$country','$email','$password')";
+	$sql="INSERT INTO `register`(`Profile_For`, `Name`, `Gender`, `D_O_B`, `Religion`, `Country`, `Email`, `Password`) VALUES ('$profile_for','$name','$gender','$Date_of_birth','$religion','$country','$email','$password')";
 	//echo  $sql;
+
+	
+
 
 	if ($conn->query($sql)) {
 		$sql = "INSERT INTO `login`(`Email`, `Password`) VALUES ('$email','$password')";
