@@ -74,7 +74,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="header-right-w3ls">
 					<?php
 					if (isset($_SESSION['Email'])) {
-						
 					} else {
 						echo "<a href='login.php'>Log In</a>";
 					}
@@ -82,7 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<?php
 					if (isset($_SESSION['Email'])) {
 						include 'config.php';
-						$Email=$_SESSION['Email'];
+						$Email = $_SESSION['Email'];
 						$sql = "select Profile_Pic from register where Email= '$Email'";
 						$result = $conn->query($sql);
 						$row = $result->fetch_assoc();
@@ -96,7 +95,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</ul>
 							</li>";
 					} else {
-					   echo "<a href='register.php'>Register</a>";
+						echo "<a href='register.php'>Register</a>";
 					}
 					?>
 				</div>
@@ -139,10 +138,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="sim-button button12"><a href="about.php">More About Us</a></div>
 			<div class="agileits-social">
 				<ul>
-					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fa fa-rss"></i></a></li>
-					<li><a href="#"><i class="fa fa-vk"></i></a></li>
+					<li><a href="https://www.facebook.com/happymarriagecenterindia"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://www.instagram.com/happy.marriagecenter?igsh=MXA5eGx3NnE5MHJoYg=="><i class="fa fa-instagram"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/happy-marriage-center/"><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="https://x.com/HappyMarriageC2"><i class="fa fa-twitter"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -194,21 +193,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="form-bg-w3ls">
 					<h3 class="subhead-agileits white-w3ls">Interested in assisted services....?</h3>
 					<p class="para-agileits-w3layouts">Leave your details below, we'll call you back.</p>
-					<form action="#" method="post">
+					<form method="post" onsubmit="return CheckInputvalue()">
 						<input type="text" name="Name" placeholder="Full name" required="">
-						<input type="text" name="number" placeholder="Number" required="">
+						<input type="text" name="Mobile" placeholder="Mobile Number" required="" id="mobile"> <span id="mobileresult"></span>
 						<input type="email" name="Email" placeholder="Email" required="">
-						<select class="form-control">
-							<option>Select Location</option>
-							<option>Bangalore</option>
-							<option>Chandigarh</option>
-							<option>Kolkata</option>
-							<option>Ludhiana</option>
-							<option>Mumbai</option>
-							<option>Mysore</option>
-							<option>Pune</option>
-						</select>
-						<input type="submit" value="Submit" class="button-w3layouts hvr-rectangle-out">
+						<textarea name="Address" placeholder="Enter your Address" required=""></textarea>
+						<input type="submit" value="Submit" name="submit" class="button-w3layouts hvr-rectangle-out">
 					</form>
 				</div>
 			</div>
@@ -385,6 +375,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 	</div>
+
 
 	<!--//gallery-->
 	<?php

@@ -37,8 +37,8 @@ $fliename = $row['Profile_Pic']
 		<h3><?php echo $name?></h3>
 	</div>
 	<div class="matches-main-agileinfo">
-		<div class="col-md-6 profile1"> 
-			<img src="<?php echo $fliename ?>" alt="" style="height:60%;width:100%">
+		<div class="col-md-6 self-profile"> 
+			<img src="<?php echo $fliename ?>" alt="" style="height:50%;width:100%">
 		</div>
 		<div class="col-md-6 person-info-agileits-w3layouts">
 			<ul>
