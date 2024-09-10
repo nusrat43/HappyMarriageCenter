@@ -119,6 +119,8 @@ ul.nav.navbar-nav.navbar-right li:nth-child(6) a {
     border-left: 3px solid rgba(68, 199, 244, 0.37);
     border-top: 3px solid rgba(68, 199, 244, 0.37);
 }
+
+
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     color: #fff;
 }
