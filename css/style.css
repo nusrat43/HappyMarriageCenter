@@ -80,7 +80,7 @@ h1.logo a {
 	width: 100% !important ;
 	float:none ;
 	padding-bottom: 20px;
-	border-radius: 3%;
+	border-radius: 10px;
 }
 
 .navbar-default {
@@ -884,6 +884,33 @@ h3.subhead-agileits {
     line-height: 29px;
     text-align: center;
     margin: 0 0 .3em;
+}
+
+
+.form-row textarea{
+	width: 72%;
+    padding: 10px;
+    height: 39px;
+    font-weight: normal;
+    background: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    margin: 15px 0px 0px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+.form-row textarea{
+	
+		resize:none;
+		height:50px;
 }
 /*-- //services --*/
 /*--modal--*/

@@ -30,7 +30,7 @@
         .form-row {
             display: flex;
             justify-content: space-around;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .form-group {
@@ -43,12 +43,21 @@
             margin-bottom: 5px;
         }
 
+        .form-group span {
+            font-weight: bold;
+
+        }
+
         .form-group input {
-            width: 100%;
+            /* width: 100%; */
             padding: 10px;
             border: 1px solid #ccc;
             /* border-radius: 4px; */
             box-sizing: border-box;
+        }
+
+        .w3_gender input {
+            margin-left: 20px;
         }
     </style>
 
@@ -88,7 +97,7 @@
                                 <input type="text" name="Name" placeholder="Name" value='' id="name" required="">
                             </div>
                             <div class="form-group w3_form_body_grid">
-                                <label for="profession">Gender :</label>
+                                <span for="profession">Gender :</span>
                                 <div class="w3_gender">
                                     <div class="colr ert">
                                         <label class="radio"><input type="radio" name="Gender" checked="" value="Male">Male</label>
@@ -162,13 +171,13 @@
                         </div>
 
                         <div class="form-row">
-                        <div class="form-group">
-                            <label for="Marital_status">About Your Self : </label>
-                            <textarea name="Message" placeholder="Message" required=""></textarea>
-                        </div>
+                            <div class="form-group">
+                                <label for="Marital_status">About Your Self : </label>
+                                <textarea name="Message" placeholder="Message" required=""></textarea>
+                            </div>
                             <div class="form-group">
                                 <label for="photo">Your Photo :</label>
-                                <input type="file" name="Photo"  required="" value=''>
+                                <input type="file" name="Photo" required="" value=''>
                             </div>
                         </div>
 
@@ -186,8 +195,8 @@
                                 <input type="text" id="education" name="education" placeholder="Enter education">
                             </div>
                             <div class="form-group">
-                                <label for="profession">Profession :</label>
-                                <input type="text" id="profession" name="profession" placeholder="Enter profession">
+                                <label for="diet">Diet :</label>
+                                <input type="text" id="diet" name="diet" placeholder="Enter Diet">
                             </div>
                         </div>
 
@@ -213,10 +222,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="diet">Diet :</label>
-                            <input type="text" id="diet" name="diet" placeholder="Enter Diet">
-                        </div>
+
 
                         <fieldset>
                             <legend>
@@ -260,65 +266,64 @@
                                 <h3>What She Is Looking For
                                 </h3>
                             </legend>
-                        </fieldset>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="age">Age :</label>
-                                <input type="text" id="age" name="age" placeholder="Enter your age">
-                            </div>
-                            <div class="form-group">
-                                <label for="marital_status">Marital Status :</label>
-                                <input type="text" id="marital_status" name="marital_status" placeholder="Enter your Marital Status">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="complexion">Complexion :</label>
-                                <input type="text" id="complexion" name="complexion" placeholder="Enter Complexion">
-                            </div>
-                            <div class="form-group">
-                                <label for="height">Height :</label>
-                                <input type="text" id="height" name="height" placeholder="Enter height">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="Marital_status">religion :</label>
-                                <select id="w3_country1" onchange="change_country(this.value)" class="frm-field required" name="Religion">
-                                    <option selected="selected" value=''></option>
-                                    <option value="Hindu">Hindu</option>
-                                    <option value="Muslim">Muslim</option>
-                                    <option value="Christian">Christian</option>
-                                    <option value="Sikh">Sikh</option>
-                                    <option value="Jain">Jain</option>
-                                    <option value="Buddhist">Buddhist</option>
-                                    <option value="No Religious Belief">No Religious Belief</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="country">Caste :</label>
-                                <input type="text" name="country" placeholder="country" required="" value=''>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="drink">Drink :</label>
-                                <input type="text" id="drink" name="drink" placeholder="Enter Complexion">
-                            </div>
-                            <div class="form-group">
-                                <label for="diet">Diet :</label>
-                                <input type="text" id="diet" name="diet" placeholder="Enter Diet">
-                            </div>
-                        </div>
 
 
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="age">Age :</label>
+                                    <input type="text" id="age" name="age" placeholder="Enter your age">
+                                </div>
+                                <div class="form-group">
+                                    <label for="marital_status">Marital Status :</label>
+                                    <input type="text" id="marital_status" name="marital_status" placeholder="Enter your Marital Status">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="complexion">Complexion :</label>
+                                    <input type="text" id="complexion" name="complexion" placeholder="Enter Complexion">
+                                </div>
+                                <div class="form-group">
+                                    <label for="height">Height :</label>
+                                    <input type="text" id="height" name="height" placeholder="Enter height">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="Marital_status">religion :</label>
+                                    <select id="w3_country1" onchange="change_country(this.value)" class="frm-field required" name="Religion">
+                                        <option selected="selected" value=''></option>
+                                        <option value="Hindu">Hindu</option>
+                                        <option value="Muslim">Muslim</option>
+                                        <option value="Christian">Christian</option>
+                                        <option value="Sikh">Sikh</option>
+                                        <option value="Jain">Jain</option>
+                                        <option value="Buddhist">Buddhist</option>
+                                        <option value="No Religious Belief">No Religious Belief</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Caste :</label>
+                                    <input type="text" name="country" placeholder="country" required="" value=''>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="drink">Drink :</label>
+                                    <input type="text" id="drink" name="drink" placeholder="Enter Complexion">
+                                </div>
+                                <div class="form-group">
+                                    <label for="diet">Diet :</label>
+                                    <input type="text" id="diet" name="diet" placeholder="Enter Diet">
+                                </div>
+                            </div>
 
 
 
-                        <input type="submit" value="Edit" name="submit">
+
+                            <input type="submit" value="Create Profile" name="submit">
                     </form>
 
                 </div>
