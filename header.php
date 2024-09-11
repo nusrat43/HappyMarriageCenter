@@ -35,8 +35,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="//fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
 	<!--//fonts-->
 
-	
-</script>
+
+	</script>
 </head>
 
 <body>
@@ -79,7 +79,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="clearfix"> </div>
 				</nav>
 				<div class="header-right-w3ls">
-				<?php
+					<?php
 					if (isset($_SESSION['Email'])) {
 						
 					} else {
@@ -89,7 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<?php
 					if (isset($_SESSION['Email'])) {
 						include 'config.php';
-						$Email=$_SESSION['Email'];
+						$Email = $_SESSION['Email'];
 						$sql = "select Profile_Pic from register where Email= '$Email'";
 						$result = $conn->query($sql);
 						$row = $result->fetch_assoc();
@@ -99,12 +99,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<ul class='dropdown-menu'>
 								<li><a href='profile_form.php'>Create Your Profile</a></li>
 								<li><a href='self-Profile.php'>View Your Profile</a></li>
-									<li><a href='edit.php'>Edit Your Profile</a></li>
-									<li><a href='logout.php'>Log Out</a></li>
+								<li><a href='userEdit.php'>Edit Your Profile</a></li>
+								<li><a href='logout.php'>Log Out</a></li>
 								</ul>
 							</li>";
 					} else {
-					   echo "<a href='register.php'>Register</a>";
+						echo "<a href='register.php'>Register</a>";
 					}
 					?>
 

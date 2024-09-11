@@ -105,28 +105,32 @@
              {
                
              include 'config.php';
-
              $formusername=$_POST['Email'];
-             $formpassword=$_POST['Password'];
+             $formpassword=md5($_POST['Password']);
              $sql="select * from login where Email='".$formusername."' and Password='".$formpassword."'";
              $result=$conn->query($sql);
              
         
              if($row = $result->fetch_assoc())
-             {$name = $row['id'];
-				$_SESSION['Email'] = $formusername;
-				echo "<script>
-				alert('You have Login successfully!'); 
-				  window.location='index.php?id=$id'; 
-		    
-			   </script>";
-
-             }
-             else
              {
-                echo "Wrong username or password!";
-             }
-            }
+				$_SESSION['Email'] = $formusername;
+				$type = $row['Type'];
+
+         if ($type == 'Admin') {
+            echo "<script>
+                
+                window.location='ViewAllUser.php'; 
+                </script>";
+         } else if ($type == 'User') {
+            echo "<script>
+                alert('You have Login successfully!'); 
+                window.location='index.php'; 
+                </script>";
+         }
+      } else {
+         echo "Wrong username or password!";
+      }
+   }
          ?>
 
 <!--login-inner-->

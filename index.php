@@ -89,9 +89,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						echo "<li class='dropdown menu__item'>
 								<a href='#' id='profile' class='dropdown-toggle menu__link' data-toggle='dropdown' data-hover='Pages'><img style='border-radius:50%;height:60px; width:60px;' src='$fliename'> </a>
 								<ul class='dropdown-menu'>
+								<li><a href='profile_form.php'>Create Your Profile</a></li>
 								<li><a href='self-Profile.php'>View Your Profile</a></li>
-									<li><a href='edit.php'>Edit Your Profile</a></li>
-									<li><a href='logout.php'>Log Out</a></li>
+								<li><a href='userEdit.php'>Edit Your Profile</a></li>
+								<li><a href='logout.php'>Log Out</a></li>
 								</ul>
 							</li>";
 					} else {

@@ -211,7 +211,7 @@ if (isset($_POST['submit'])) {
 	$religion = $_POST['Religion'];
 	$country = $_POST['Country'];
 	$email = $_POST['Email']; //normal variable can be accessed only in one webpage
-	$password = $_POST['Password'];
+	$password = md5($_POST['Password']);
 	$sql="INSERT INTO `register`(`Profile_For`, `Name`, `Gender`, `D_O_B`, `Religion`, `Country`, `Email`, `Password`,`Profile_Pic`) VALUES ('$profile_for','$name','$gender','$Date_of_birth','$religion','$country','$email','$password','$target_file')";
 	//echo  $sql;
 
