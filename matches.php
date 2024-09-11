@@ -119,5 +119,24 @@ include 'header.php' ;
 </div>
 <!--login-inner-->
 <?php
+   include 'config.php';
+   $name=$_SESSION['Name'];
+
+   $sql = "SELECT `id`, `Name`, `Gender`, `Age`, `Height`, `Religion`, `caste`, `Marital_status`, `Profile_For`, `Profession`, `Country`, `About`, `Photo`, `Education`, `Diet`, `Language`, `Blood_Group`, `Complexion`, `Weight`, `F_Name`, `F_Occu`, `M_Name`, `M_Occu`, `No_Brothers`, `No_Sisters`, `I_age`, `I_MaritalStatus`, `I_Complexion`, `I_Height`, `I_Religion`, `I_Caste`, `I_Diet` FROM `profile` WHERE 1 Name= '$name'";
+   $result = $conn->query($sql);
+   $row = $result->fetch_assoc();
+   $profile_For = $row['Profile_For'];
+   $name = $row['Name'];
+   $gender = $row['Gender'];
+   $D_O_B = $row['D_O_B'];
+   $religion = $row['Religion'];
+   $country = $row['Country'];
+$fliename = $row['Profile_Pic']
+?>
+
+
+
+
+<?php
 include 'footer.php' ;
 ?>

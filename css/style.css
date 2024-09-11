@@ -1514,6 +1514,7 @@ background: rgba(0, 0, 0, 0.17);
     color: #EA3621;
     text-decoration: none;
 }
+
 .w3l_agileits_breadcrumbs ul li span {
     padding: 0 2em;
 }
@@ -3053,6 +3054,7 @@ h2.typoh2{
 	.inner-banner-agileits {
 		min-height: 115px!important;
 	}
+	
 }
 @media(max-width:900px){
 	.button a {

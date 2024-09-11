@@ -41,9 +41,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <body>
 	<!--banner start here-->
-	<div class="topDate" style="background-color:#585151; height:30px;">
-
-	</div>
 	<div class="banner-w3ls inner-banner-agileits" id="home">
 		<div class="container">
 			<!-- header -->
