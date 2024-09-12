@@ -15,75 +15,129 @@ include 'header.php' ;
 				<li>Single</li>
 				</ul>
 		</div>
+		
 	</div>
 </div>
-<!-- //breadcrumbs -->
-<div class="matches elite-app">
-	<div class="container">
-	<div class="tittle-agileinfo">
-		<h3>About Profile 1</h3>
-	</div>
-	<div class="matches-main-agileinfo">
-		<div class="col-md-6 profile1"> 
+
+
+<?php
+	
+   include 'config.php';
+  $id=$_GET['id'];
+	
+   $sql = "SELECT `Name`, `Gender`, `Age`, `Height`, `Religion`, `caste`, `Marital_status`, `Profile_For`, `Profession`, `Country`, `About`, `Photo`, `Education`, `Diet`, `Language`, `Blood_Group`, `Complexion`, `Weight`, `F_Name`, `F_Occu`, `M_Name`, `M_Occu`, `No_Brothers`, `No_Sisters`, `I_age`, `I_MaritalStatus`, `I_Complexion`, `I_Height`, `I_Religion`, `I_Caste`, `I_Diet`, `Email` FROM `profile` WHERE id=$id";
+
+   $result = $conn->query($sql);
+   echo "<div class='matches elite-app'>
+	<div class='container'>
+	<div class='tittle-agileinfo'>";
+   while ($row = $result->fetch_assoc()) {
+   
+   $name = $row['Name'];
+   $gender = $row['Gender'];
+   $Age = $row['Age'];
+   $height=$row['Height'];
+   $religion = $row['Religion'];
+   $caste=$row['caste'];
+   $marital_status=$row['Marital_status'];
+   $profile_for=$row['Profile_For'];
+   $profession=$row['Profession'];
+   $country = $row['Country'];
+   $about=$row['About'];
+   $photo=$row['Photo'];
+   $Education=$row['Education'];
+   $Diet=$row['Diet'];
+   $Language=$row['Language'];
+   $BloodGroup=$row['Blood_Group'];
+   $Complexion=$row['Complexion'];
+   $Weight=$row['Weight'];
+   $Father_Name=$row['F_Name'];
+   $Father_Occu=$row['F_Occu'];
+   $Mother_Name=$row['M_Name'];
+   $Mother_Occu=$row['M_Occu'];
+   $No_Brother=$row['No_Brothers'];
+   $No_Sister=$row['No_Sisters'];
+   $I_Age=$row['I_age'];
+   $I_Maritalstatus=$row['I_MaritalStatus'];
+   $I_Complexion=$row['I_Complexion'];
+   $I_Height=$row['I_Height'];
+   $I_religion=$row['I_Religion'];
+   $I_Caste=$row['I_Caste'];
+   $I_diet=$row['I_Diet'];
+
+   
+		echo "<h3> $name</h3> </div>
+	<div class='matches-main-agileinfo'>
+		<div class='col-md-6 '>
+		 <img src='$photo' style='width: 350px; height:450px'>
 			
 		</div>
-		<div class="col-md-6 person-info-agileits-w3layouts">
-			<ul>
-				<li><span>Age / Height</span>: 26 / 5'0''</li>
-				<li><span>Caste</span>: convallis</li>
-				<li><span>Religion</span>: Nam arcu</li>
-				<li><span>Profession</span>: Fashion Designer</li>
-				<li><span>Marital Status</span>: Single</li>
-				<li><span>Profile Created By</span>: Self</li>
-				<li><span>Location</span>: Jackson, 538, USA</li>
-				<li><span>To View Her Photo</span> <a href="Register.php">Register Free</a></li>
-			</ul>
-		</div>
-		<div class="clearfix"> </div>
-		<div class="about-person">
+		<div class='col-md-6 person-info-agileits-w3layouts'>
+			<ul>";
+	
+				echo "<li><span>Age / Height</span>$Age</li>
+				<li><span>Height</span>$height</li>
+				<li><span>Caste</span>$caste</li>
+				<li><span>Religion</span>: $religion</li>
+				<li><span>Profession</span>: $profession</li>
+				<li><span>Marital Status</span>: $marital_status</li>
+				<li><span>Profile Created By</span>:  $profile_for</li>
+				<li><span>Location</span>: $country</li>
+				<li><span>To View Her Photo</span> <a href='Register.php'>Register Free</a></li>";
+			echo "</ul> </div>
+		<div class='clearfix'> </div>
+		<div class='about-person'>
 			<h6>About Myself:</h6>
-			<p class="para-agileits-w3layouts"><span>Hi!, Iam Jessica </span>Nam arcu mauris, tincidunt sed convallis non, egestas ut lacus. Cras sapien urna, malesuada ut varius consequat, hendrerit nisl. Aliquam vestibulum, odio non ullamcorper malesuada.Nam arcu mauris, tincidunt sed convallis non, egestas ut lacus. Cras sapien urna, malesuada ut varius consequat, hendrerit nisl.</p>
+			<p class='para-agileits-w3layouts'><span>Hi!, $name </span>$about</p>
 		</div>
 	</div>
-		<div class="col-md-6 person-info-agileits-w3layouts">
+		<div class='col-md-6 person-info-agileits-w3layouts'>
 			<h3>Education, Basics & Lifestyle</h3>
-			<ul>
-				<li><span>Education</span>: Designing</li>
-				<li><span>Profession</span>: Fashion Designer</li>
-				<li><span>Mother Tongue</span>: English</li>
-				<li><span>Blood Group</span>: B+</li>
-				<li><span>Complexion</span>: Fair</li>
-				<li><span>Weight</span>: 45</li>
-				<li><span>Diet</span>: Non-Veg</li>
-			</ul>
+			<ul>";
+		
+			echo"	<li><span>Education</span>: $Education</li>
+				<li><span>Profession</span>: $profession</li>
+				<li><span>Mother Tongue</span>: $Language</li>
+				<li><span>Blood Group</span>:  $BloodGroup</li>
+				<li><span>Complexion</span>:  $Complexion</li>
+				<li><span>Weight</span>:  $Weight</li>
+				<li><span>Diet</span>:  $Diet</li>";
+			echo "</ul>
 		</div>
-		<div class="col-md-6 person-info-agileits-w3layouts">
+		<div class='col-md-6 person-info-agileits-w3layouts'>
 			<h3>Family Details</h3>
-			<ul>
-				<li><span>Fathers Name</span>: Lorem Ipsum</li>
-				<li><span>Fathers Occupation</span>: vestibulum</li>
-				<li><span>Mothers Name</span>: convallis</li>
-				<li><span>Mothers Occupation</span>: vestibulum</li>
-				<li><span>No. Of Brothers</span>: 2</li>
-				<li><span>No. Of Sisters</span>: Not Specified</li>
-			</ul>
+			<ul>";
+				echo "<li><span>Fathers Name</span>:  $Father_Name</li>
+				<li><span>Fathers Occupation</span>: $Father_Occu</li>
+				<li><span>Mothers Name</span>: $Mother_Name</li>
+				<li><span>Mothers Occupation</span>:  $Mother_Occu</li>
+				<li><span>No. Of Brothers</span>: $No_Brother</li>
+				<li><span>No. Of Sisters</span>: $No_Sister</li>";
+			echo "</ul>
 		</div>
-		<div class="col-md-6 person-info-agileits-w3layouts">
+		<div class='col-md-6 person-info-agileits-w3layouts'>
 			<h3>What She Is Looking For</h3>
-			<ul>
-				<li><span>Age</span>: 26-28</li>
-				<li><span>Marital Status</span>: Single</li>
-				<li><span>Complexion</span>: Fair</li>
-				<li><span>height</span>: 5'7'' - 5'9''</li>
-				<li><span>Caste</span>: Doesn't Matter</li>
-				<li><span>Religion</span>: Lorem Ipsum</li>
-				<li><span>Drink</span>: Never Drinks</li>
-				<li><span>Diet</span>: Non-Veg</li>
-			</ul>
+			<ul>";
+
+			echo"	<li><span>Age</span>:$I_Age</li>
+				<li><span>Marital Status</span>: $I_Maritalstatus</li>
+				<li><span>Complexion</span>:  $I_Complexion</li>
+				<li><span>height</span>:$I_Height</li>
+				<li><span>Caste</span>: $I_Caste</li>
+				<li><span>Religion</span>: $I_religion </li>
+				<li><span>Diet</span>:  $I_diet</li>";
+			echo "</ul>
 		</div>
 	</div>
-</div>
+</div>";
+   }
+?>
+<!-- //breadcrumbs -->
+
 <!--login-inner-->
+
+
+
 <?php
 include 'footer.php' ;
 ?>

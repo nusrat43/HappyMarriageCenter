@@ -444,7 +444,6 @@ if (isset($_POST['submit'])) {
     $I_Height=$_POST['I_height'];
     $I_religion=$_POST['religion'];
     $I_Caste=$_POST['i_caste'];
-    $I_Drink=$_POST['i_drink'];
     $I_diet=$_POST['i_diet'];
 	$sql="INSERT INTO `profile`(`Name`, `Gender`, `Age`, `Height`, `Religion`, `caste`, `Marital_status`, `Profile_For`, `Profession`, `Country`, `About`, `Photo`, `Education`, `Diet`, `Language`, `Blood_Group`, `Complexion`, `Weight`, `F_Name`, `F_Occu`, `M_Name`, `M_Occu`, `No_Brothers`, `No_Sisters`, `I_age`, `I_MaritalStatus`, `I_Complexion`, `I_Height`, `I_Religion`, `I_Caste`, `I_Diet`) VALUES ('$name','$gender','$age','$height','$religion','$caste','$Material_Status','$profile_for','$Profession','$country','$Message','$target_file','$Education','$Diet','$Language','$BloodGroup','$Complexion','$Weight','$Father_Name','$Father_Occu','$Mother_Name','$Mother_Occu','$No_Brother','$No_Sister','$I_Age','$I_MaritalStatus','$I_Complexion','$I_Height','$I_religion','$I_Caste','$I_diet')";
 	//echo  $sql;

@@ -942,7 +942,7 @@ h3.subhead-agileits {
 /*-- //Banner-Slider --*/
 /*-- main --*/
 .banner-btm-w3layouts,.gallery,.w3ls-team,.test,.middle-section-agileits-w3layouts,.contact,.newsletter,.services,.elite-app{
-	padding: 5em 0em;;
+	padding: 1em 0em;
 }
 .tittle-agileinfo{
 	margin-bottom:2.5em;
@@ -1940,18 +1940,10 @@ ul.resp-tabs-list {
 	}
 }
 
-.profile1 {
-    background: url(../images/p1.jpg) no-repeat 0px 0px;
+.blurred-image{
+	filter: blur(4px); /* 5px blur applied */
 }
-.profile2 {
-    background: url(../images/p2.jpg) no-repeat 0px 0px;
-}
-.profile3 {
-    background: url(../images/p3.jpg) no-repeat 0px 0px;
-}
-.profile4 {
-    background: url(../images/p4.jpg) no-repeat 0px 0px;
-}
+
 .person-info-agileits-w3layouts ul li {
     list-style: none;
     display: block;

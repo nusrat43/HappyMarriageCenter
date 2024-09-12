@@ -59,13 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="index.php" class="active">Home</a></li>
 							<li><a href="about.php">About</a></li>
 							<li><a href="matches.php">Matches</a></li>
-							<li class="dropdown menu__item">
-								<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" data-hover="Pages" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="codes.php">Short Codes</a></li>
-									<li><a href="icons.php">Icons</a></li>
-								</ul>
-							</li>
+							
 							<li><a href="contact.php">Contact</a></li>
 						</ul>
 					</div>
@@ -111,7 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li>
 								<div class="w3ls-info">
 									<h4>Be fabulous. Be empowered. Be Blown Away!</h4>
-									<p>We’re Committed to Service Excellence By Elite Match.</p>
+									<p>We’re Committed to Service Excellence By Happy Marriage Center.</p>
 								</div>
 
 							</li>
@@ -125,7 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li>
 								<div class="w3ls-info">
 									<h4>Be fabulous. Be empowered. Be Blown Away!</h4>
-									<p>Welcome to our Elite match - keep in touch with us...</p>
+									<p>Welcome to our Happy Marriage Center - keep in touch with us...</p>
 								</div>
 
 							</li>
@@ -309,7 +303,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--/gallery-->
 	<div class="gallery" id="gallery">
 		<div class="tittle-agileinfo">
-			<h3>Together by Elite Match</h3>
+			<h3>Together by Happy Marriage Center</h3>
 		</div>
 		<ul id="flexiselDemo1">
 			<li>

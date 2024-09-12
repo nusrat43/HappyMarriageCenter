@@ -88,7 +88,7 @@ include 'header.php' ;
 	<div class="tittle-agileinfo">
 				<h3>Find Us</h3>
 			</div>
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2453.541062085639!2d1.1943017158471063!3d52.05167107972815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d99fa5c3b9c23f%3A0x1c973f6b89853630!2sMatrimonium+Elite!5e0!3m2!1sen!2sin!4v1490253796112"></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57579.96662203168!2d85.00443568285387!3d25.58005230000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed585b8a8095bd%3A0xe1a0b73d388d4a0c!2sSoftware%20Services%20%26%20Solutions%20%7C%20best%20software%20company%20in%20patna%20%7C%20best%20website%20design%20company%20in%20patna!5e0!3m2!1sen!2sin!4v1726143239244!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>	
 <?php
 include 'footer.php' ;
