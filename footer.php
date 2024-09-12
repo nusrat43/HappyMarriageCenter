@@ -39,7 +39,7 @@
 			<p>© <script>
 					var today = new Date(); // Date objects are created with the new Date() constructor
 					var year = today.getFullYear();
-					document.write("Copyright "+year);
+					document.write("Copyright " + year);
 				</script>
 				Happy Marriage Center. All rights reserved | Design by <a href="http://w3layouts.com/">SSS</a></p>
 		</div>
@@ -53,6 +53,7 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
+</div>
 </div>
 <!--/footer -->
 <!-- js -->

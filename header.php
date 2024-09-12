@@ -41,7 +41,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <body>
 	<!--banner start here-->
-	<div class="topDate" style="background-color:#585151; height:30px;">
 
 	</div>
 	<div class="banner-w3ls inner-banner-agileits" id="home">
@@ -81,7 +80,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="header-right-w3ls">
 					<?php
 					if (isset($_SESSION['Email'])) {
-						
 					} else {
 						echo "<a href='login.php'>Log In</a>";
 					}
@@ -100,6 +98,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a href='profile_form.php'>Create Your Profile</a></li>
 								<li><a href='self-Profile.php'>View Your Profile</a></li>
 								<li><a href='userEdit.php'>Edit Your Profile</a></li>
+								<li><a href='userEditPassword.php'>Change Your Password</a></li>
 								<li><a href='logout.php'>Log Out</a></li>
 								</ul>
 							</li>";
