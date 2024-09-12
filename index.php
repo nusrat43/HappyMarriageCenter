@@ -86,6 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a href='profile_form.php'>Create Your Profile</a></li>
 								<li><a href='self-Profile.php'>View Your Profile</a></li>
 								<li><a href='userEdit.php'>Edit Your Profile</a></li>
+								<li> <a href='userEditPassword.php'>Change Password</a></li>
 								<li><a href='logout.php'>Log Out</a></li>
 								</ul>
 							</li>";

@@ -40,66 +40,194 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         </script>
         <style>
-            .admin_nav {
-                margin-top: auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 0 20px;
+            /* The side navigation menu */
+            .sidebar {
+                margin: 0;
+                padding: 0;
+                width: 250px;
+                background-color: #f1f1f1;
+                position: fixed;
+                height: 100%;
+                overflow: auto;
+            }
+
+            /* Sidebar links */
+            .sidebar a {
+                display: block;
+                color: black;
+                padding: 16px;
+                text-decoration: none;
+            }
+
+            /* Active/current link */
+            .sidebar a.active {
+                background-color: #EA3621;
+                color: white;
+            }
+
+            /* Links on mouse-over */
+            .sidebar a:hover:not(.active) {
+                background-color: #555;
+                color: white;
+            }
+
+            /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+            div.content {
+                margin-left: 250px;
+                height: fit-content;
+            }
+
+            .toggle-btn {
+                display: none;
+            }
+
+            /* On screens that are less than 700px wide, make the sidebar into a topbar */
+
+            @media screen and (max-width: 1200px) {
+                .sidebar {
+                    margin: 0;
+                    padding: 0;
+                    width: 250px;
+                    background-color: #f1f1f1;
+                    position: fixed;
+                    height: 100%;
+                    overflow: auto;
+                }
+
+                /* Sidebar links */
+                .sidebar a {
+                    display: block;
+                    color: black;
+                    padding: 16px;
+                    text-decoration: none;
+                }
+
+                /* Active/current link */
+                .sidebar a.active {
+                    background-color: #EA3621;
+                    color: white;
+                }
+
+                /* Links on mouse-over */
+                .sidebar a:hover:not(.active) {
+                    background-color: #555;
+                    color: white;
+                }
+
+                /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+                div.content {
+                    margin-left: 250px;
+                    height: fit-content;
+                }
+
+                .toggle-btn {
+                    display: none;
+                }
+            }
+
+            @media screen and (max-width: 1200px) {
+
+                /* styles.css */
+                div.content {
+                    margin-left: 0px;
+                    height: fit-content;
+                }
+
+                .toggle-btn {
+                    display: inline-block;
+                    font-size: 18px;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    z-index: 1000;
+                }
+
+                .sidebar {
+                    height: fit-content;
+                    width: 250px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: white;
+                    overflow-x: hidden;
+                    transition: 0.3s;
+                    z-index: 100;
+                    transform: translateX(-100%);
+                }
+
+                .sidebar a {
+                    padding: 15px;
+                    text-decoration: none;
+                    font-size: 18px;
+                    color: black;
+                    display: block;
+                    transition: 0.3s;
+                    text-align: center;
+                    float: none;
+                }
+
+                .sidebar a:hover {
+                    color: #f1f1f1;
+                }
+
+
+                /* Show sidebar */
+                .sidebar.show {
+                    transform: translateX(0);
+                }
             }
         </style>
     </head>
 
-<body>
-    <div class="banner-w3ls inner-banner-agileits" id="home">
-        <div class="container">
-            <div class="header-inner">
-                <h1 class="logo">
-                    <a href="index.php"><img src="images/LOGO.png"></a>
-                </h1>
-                <nav class="navbar navbar-default">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <!-- navbar-header -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="ViewAllUser.php">View Users</a></li>
-                            <li><a href="ChangePassword.php">Change Password</a></li>
-                            <li><a href="Enable.php">Enable/Disable Users</a></li>
-                            <li><a href="EditUserType.php">Change User Type</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <div class="header-right-w3ls">
-                    <?php
-                    if (isset($_SESSION['Email'])) {
-                        include 'config.php';
-                        $Email = $_SESSION['Email'];
-                        $sql = "select Profile_Pic from register where Email= '$Email'";
-                        $result = $conn->query($sql);
-                        $row = $result->fetch_assoc();
-                        $fliename = $row['Profile_Pic'];
-                        echo "<li class='dropdown menu__item'>
+<body><!-- The sidebar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggleButton = document.querySelector('.toggle-btn');
+            var sidebar = document.querySelector('.sidebar');
+
+            toggleButton.addEventListener('click', function() {
+                sidebar.classList.toggle('show');
+            });
+        });
+    </script>
+    <button class="toggle-btn">☰</button>
+    <div class="sidebar">
+        <a class="active" href="#home">
+            <span><img height="25px" width="25px" src="images/gauge-high-solid (1).svg" alt=""></span> Admin Dashboard</a>
+        <a href="ViewAllUser.php">View All User</a>
+        <a href="enable.php">Enable/Disable User </a>
+        <a href="adminEditPassword.php">Change Password</a>
+        <a href="editUserType.php">Change User Type</a>
+    </div>
+
+    <div class="content">
+        <div class="banner-w3ls inner-banner-agileits" id="home">
+            <div class="container">
+                <div class="header-inner">
+                    <h1 class="logo">
+                        <a href="index.php"><img src="images/LOGO.png"></a>
+                    </h1>
+                    <div class="header-right-w3ls">
+                        <?php
+                        if (isset($_SESSION['Email'])) {
+                            include 'config.php';
+                            $Email = $_SESSION['Email'];
+                            $sql = "select Profile_Pic from register where Email= '$Email'";
+                            $result = $conn->query($sql);
+                            $row = $result->fetch_assoc();
+                            $fliename = $row['Profile_Pic'];
+                            echo "<li class='dropdown menu__item'>
 								<a href='#' id='profile' class='dropdown-toggle menu__link' data-toggle='dropdown' data-hover='Pages'><img style='border-radius:50%;height:60px; width:60px;' src='$fliename'> </a>
 								<ul class='dropdown-menu'>
-								<li><a href='profile_form.php'>Create Your Profile</a></li>
-								<li><a href='self-Profile.php'>View Your Profile</a></li>
-									<li><a href='userEdit.php'>Edit Your Profile</a></li>
 									<li><a href='logout.php'>Log Out</a></li>
 								</ul>
 							</li>";
-                    }
-                    ?>
+                        }
+                        ?>
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <H1 align="center" style="margin-top: 20px; margin-bottom :20px;">Admin Dashboard</H1>
+        <H1 align="center" style="margin-top: 20px; margin-bottom :20px;">Admin Dashboard</H1>
