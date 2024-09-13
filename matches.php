@@ -3,13 +3,14 @@
 
 
 	<?php
-	include 'header.php';
+	include 'admin_header.php';
 	?>
+
 
 
 </head>
 <!-- breadcrumbs -->
-<div class="w3l_agileits_breadcrumbs">
+<!-- <div class="w3l_agileits_breadcrumbs">
 	<div class="container">
 		<div class="w3l_agileits_breadcrumbs_inner">
 			<ul>
@@ -21,7 +22,9 @@
 
 		</div>
 	</div>
-</div>
+</div> -->
+
+
 
 
 <?php

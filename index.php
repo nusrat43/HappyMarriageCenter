@@ -58,8 +58,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="index.php" class="active">Home</a></li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="matches.php">Matches</a></li>
-							
+							<li class="dropdown menu__item">
+								<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" data-hover="Pages" role="button" aria-haspopup="true" aria-expanded="false">Policies & Terms<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+								<li><a href="Terms&Condition.php">Terms And Condition</a></li>
+									<li><a href="PrivacyPolicy.php">Privacy Policy</a></li>
+									<li><a href="ReturnPolicy.php">Return Policy</a></li>
+								</ul>
+							</li>
 							<li><a href="contact.php">Contact</a></li>
 						</ul>
 					</div>
@@ -86,7 +92,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a href='profile_form.php'>Create Your Profile</a></li>
 								<li><a href='self-Profile.php'>View Your Profile</a></li>
 								<li><a href='userEdit.php'>Edit Your Profile</a></li>
-								<li> <a href='userEditPassword.php'>Change Password</a></li>
 								<li><a href='logout.php'>Log Out</a></li>
 								</ul>
 							</li>";
@@ -323,7 +328,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="wthree_gallery_grid">
 					<a href="images/g2.jpg" class="lsb-preview" data-lsb-group="header">
 						<div class="view second-effect">
-							<img src="images/g2.jpg" alt="" class="img-responsive" />
+							<!-- <img src="images/g2.jpg" alt="" class="img-responsive" /> -->
 							<div class="mask">
 								<p>Abelard <i class="fa fa-heart-o" aria-hidden="true"></i> Heloise</p>
 							</div>

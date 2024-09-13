@@ -81,6 +81,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 display: none;
             }
 
+            hr {
+                height: 10px;
+                background-color: red;
+            }
+
+
             /* On screens that are less than 700px wide, make the sidebar into a topbar */
 
             @media screen and (max-width: 1200px) {
@@ -198,6 +204,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <a href="ViewAllUser.php">View All User</a>
         <a href="enable.php">Enable/Disable User </a>
         <a href="adminEditPassword.php">Change Password</a>
+        <a href="matches.php">Matches</a>
         <a href="editUserType.php">Change User Type</a>
     </div>
 
@@ -231,3 +238,5 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
         <H1 align="center" style="margin-top: 20px; margin-bottom :20px;">Admin Dashboard</H1>
+
+        <hr>

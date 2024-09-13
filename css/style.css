@@ -1940,9 +1940,9 @@ ul.resp-tabs-list {
 	}
 }
 
-.blurred-image{
-	filter: blur(4px); /* 5px blur applied */
-}
+/* .blurred-image{
+	filter: blur(4px); /* 5px blur applied 
+} */
 
 .person-info-agileits-w3layouts ul li {
     list-style: none;

@@ -41,6 +41,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <body>
 	<!--banner start here-->
+	<div class="topDate" style="background-color:#585151; height:30px;">
 
 	</div>
 	<div class="banner-w3ls inner-banner-agileits" id="home">
@@ -64,8 +65,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="index.php">Home</a></li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="matches.php">Matches</a></li>
-							
+							<li class="dropdown menu__item">
+								<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" data-hover="Pages" role="button" aria-haspopup="true" aria-expanded="false">Policies & Terms<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="Terms&Condition.php">Terms And Condition</a></li>
+									<li><a href="PrivacyPolicy.php">Privacy Policy</a></li>
+									<li><a href="ReturnPolicy.php">Return Policy</a></li>
+								</ul>
+							</li>
 							<li><a href="contact.php">Contact</a></li>
 						</ul>
 					</div>
@@ -74,6 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="header-right-w3ls">
 					<?php
 					if (isset($_SESSION['Email'])) {
+						
 					} else {
 						echo "<a href='login.php'>Log In</a>";
 					}
@@ -92,7 +100,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a href='profile_form.php'>Create Your Profile</a></li>
 								<li><a href='self-Profile.php'>View Your Profile</a></li>
 								<li><a href='userEdit.php'>Edit Your Profile</a></li>
-								<li><a href='userEditPassword.php'>Change Your Password</a></li>
 								<li><a href='logout.php'>Log Out</a></li>
 								</ul>
 							</li>";
