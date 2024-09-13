@@ -66,6 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<li><a href="ReturnPolicy.php">Return Policy</a></li>
 								</ul>
 							</li>
+							<li><a href="blog.php"> Blog</a> </li>
 							<li><a href="contact.php">Contact</a></li>
 						</ul>
 					</div>
