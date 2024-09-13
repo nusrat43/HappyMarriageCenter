@@ -13,7 +13,7 @@
 			<ul>
 				<li><a href="index.php">Home</a><span>&#187;</span></li>
 
-				<li>About</li>
+				<li>Privacy-Policy</li>
 			</ul>
 		</div>
 	</div>
@@ -36,90 +36,105 @@
 
 <!-- about -->
 <div class="about-w3layouts" id="about">
-	<div class="tittle-agileinfo">
-		<h3>About Us</h3>
+	<!-- <div class="tittle-agileinfo">
+		<h3></h3>
 	</div>
-	<div class="about-left-agileits">
-		<div class="button">
-			<a href="#small-dialog" class="play-icon popup-with-zoom-anim"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
-		</div>
-		<div id="small-dialog" class="mfp-hide w3ls_small_dialog wthree_pop">
-			<div class="agileits_modal_body">
-				<iframe src="https://player.vimeo.com/video/198296034"></iframe>
-			</div>
-		</div>
-	</div>
-	<div class="about-right">
-		<h3 class="subheading-agileits-w3layouts"><span>Happy Marriage Center </span>Find Success Stories</h3>
-		<p class="para-agileits-w3layouts">Duis sit amet nisi quis leo fermentum vestibulum vitae eget augue. Nulla quam nunc, vulputate id urna at, tempor tincidunt metus. Sed feugiat quam nec mauris mattis malesuada.</p>
-		<div class="sim-button button12"><a href="matches.php">View Profiles</a></div>
+	 -->
+	<div class="about-right1">
+		<h3 class="subheading-agileits-w3layouts">✧ privacy Policy</h3>
+		<p class="para">Welcome to Happy Marriage Center. Your privacy is of utmost importance to us, and we are committed to protecting the personal information you share with us. This Privacy Policy outlines how we collect, use, and safeguard your data when you use our services. By using our website, you agree to the practices described in this policy.</p>
+		<h3 class="subheading-agileits-w3layouts"> ✧ Information We Collect</h3>
+		<p class="para">We collect various types of information to provide and improve our services:</p>
+
+		<p class="para_i"><span>✦ Personal Information:</span> When you register on our site, we collect personal details such as your name, email address, phone number, gender, date of birth, marital status, and other details that help us match you with potential partners.</p>
+		<p class="para_i"><span>✦ Profile Information:</span> Information related to your preferences, lifestyle choices, and other personal details that help us enhance your profile.</p>
+		<p class="para_i"> <span class="w3l_agileits_breadcrumbs_inner">✦ Automatically Collected Information:</span> We may collect information such as IP address, browser type, operating system, browsing history, and other usage data to improve our website experience.</p>
+
+
+
 	</div>
 	<div class="clearfix"> </div>
 </div>
 <!-- //about-bottom -->
-<!--search-section -->
-<div class="search-wthree">
+<div class="middle-section-agileits-w3layouts">
 	<div class="container">
-		<h3 class="subheading-agileits-w3layouts">Start your journey with confidence.</h3>
-		<div class="sim-button button12"><a href="matches.php">Search Now</a></div>
-		<div class="clearfix"> </div>
+	<br><br><br><br><br><br><br>
+		<h3 class="subheading-agileits-w3layouts"></h3>
+		<p class="para-w3layouts"></p>
+		<div class=""></div>
 	</div>
 </div>
-<!--//search-section -->
+
+<div class="about-rightw">
+		<h3 class="subheading-agileits-w3layouts"> ✧ How We Use Your Information</h3>
+		<p class="para_w"> The information we collect is used to:</p>
+		<p class="para_iW">✦ Create and manage your account.</p>
+		<p class="para_iw">✦ Provide personalized matchmaking services.</p>
+		<p class="para_iw">✦ Communicate with you via email, phone, or other means.</p>
+		<p class="para_iw">✦ Improve our website, services, and customer support.</p>
+		<p class="para_iw">✦ Analyze user behavior and site trends to improve our services.</p>
+		<p class="para_iw">✦ Protect our website and users from fraudulent activities.</p>
+
+
+	
+</div>
+<div class="middle-section-agileits-w3layouts">
+	<div class="container">
+	<br><br><br><br><br><br><br>
+		<h3 class="subheading-agileits-w3layouts"></h3>
+		<p class="para-w3layouts"></p>
+		<div class=""></div>
+	</div>
+</div>
+
+<div class="about-right1">
+	<h3 class="subheading-agileits-w3layouts"> ✧ Sharing Your Information</h3>
+	<p class="para">We value your privacy and will not share your personal information with third parties except in the following cases:
+
+	</p>
+	<p class="para_i">✦ With potential matches, as part of our services.</p>
+	<p class="para_i">✦ When required by law or to protect the rights and safety of our website, users, or others.</p>
+	<p class="para_i">✦ With service providers who help us operate our website and provide services (e.g., payment processors, hosting providers).
+	</p>
+	<h3 class="subheading-agileits-w3layouts">  ✧ Data Security
+		</h3>
+	<p class="para">We implement various security measures to ensure the safety of your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+</div>
+
 <!--middle-section -->
 <div class="middle-section-agileits-w3layouts">
 	<div class="container">
-		<h3 class="subheading-agileits-w3layouts"><span>Happy Marriage </span> Center</h3>
-		<p class="para-w3layouts">Exclusive Matchmaking Service for the Elite</p>
-		<div class="sim-button button12"><a href="contact.php">Contact Us</a></div>
+		<br><br><br><br><br><br><br>
+		<h3 class="subheading-agileits-w3layouts"></h3>
+		<p class="para-w3layouts"></p>
+		<div class=""></div>
 	</div>
 </div>
-<!--//middle-section -->
-<!-- services -->
-<div class="services" id="services">
-	<div class="container">
-		<div class="tittle-agileinfo">
-			<h3>Assisted Services</h3>
-		</div>
-		<div class="col-md-6 w3_agileits_services_grids">
-			<div class="w3_agileits_services_grid">
-				<div class="w3_agileits_services_grid_agile">
-					<div class="w3_agileits_services_grid_1">
-						<i class="fa fa-search" aria-hidden="true"></i>
-					</div>
-					<h3>Search within reach</h3>
-				</div>
-			</div>
-			<div class="w3_agileits_services_grid">
-				<div class="w3_agileits_services_grid_agile">
-					<div class="w3_agileits_services_grid_1">
-						<i class="fa fa-list-alt" aria-hidden="true"></i>
-					</div>
-					<h3>Shortlisted matches</h3>
-				</div>
-			</div>
-			<div class="w3_agileits_services_grid">
-				<div class="w3_agileits_services_grid_agile">
-					<div class="w3_agileits_services_grid_1">
-						<i class="fa fa-phone" aria-hidden="true"></i>
-					</div>
-					<h3>Initiate communication</h3>
-				</div>
-			</div>
-			<div class="w3_agileits_services_grid">
-				<div class="w3_agileits_services_grid_agile">
-					<div class="w3_agileits_services_grid_1">
-						<i class="fa fa-users" aria-hidden="true"></i>
-					</div>
-					<h3>Meet the prospects</h3>
-				</div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
+
+<div class="about-rightw">
+	
+
+		<h3 class="subheading-agileits-w3layouts"> ✧ Your Rights</h3>
+		<p class="para_w"> As a user, you have the right to:
+
+</p>
+		<p class="para_iW">✦ Access and update your personal information.</p>
+		<p class="para_iw">✦ Request the deletion of your account and personal data.</p>
+		<p class="para_iw">✦ Opt-out of promotional communications.</p>
+		<p class="para_iw">✦ Withdraw your consent for data processing, where applicable.</p>
 		
-	</div>
+		<h3 class="subheading-agileits-w3layouts"> ✧ Disclaimer</h3>
+		<p class="para_w">While we strive to provide you with the best possible matches based on the information you provide, we do not guarantee that a successful marriage will result from using our services. We will offer numerous potential matches, but the final selection and decision to proceed with a relationship or marriage is entirely up to you. We are not liable for the outcome of your matches or relationships.
+
+</p>
+
+		<h3 class="subheading-agileits-w3layouts"> ✧ Changes to This Privacy Policy</h3>
+		<p class="para_w">We reserve the right to update this Privacy Policy at any time. Any changes will be posted on this page with the updated date.</p><br> <br>
+		
+
+	
 </div>
-<!-- //services -->
 
 <?php
 include 'footer.php';

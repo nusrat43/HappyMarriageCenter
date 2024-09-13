@@ -68,6 +68,38 @@ h1 span {
     letter-spacing: 6px;
     padding-left: 53px;
 }
+.para_i span{
+	font-size: 16px;
+    color: rgb(251, 35, 35);
+	padding-bottom: 15px;
+    letter-spacing: .6px;
+    line-height: 23px;
+	/* padding-left: 50px; */
+}
+.para_w  span a{
+	font-size: 16px;
+    color: rgb(251, 35, 35);
+	padding-bottom: 15px;
+    letter-spacing: .6px;
+    line-height: 23px;
+	/* padding-left: 50px; */
+}
+.para_i{
+	font-size: 16px;
+    color: white;
+	padding-bottom: 15px;
+	padding-left: 50px;
+    letter-spacing: .6px;
+    line-height: 23px;
+}
+.para_iw{
+	font-size: 16px;
+    color: black;
+	padding-bottom: 15px;
+	padding-left: 50px;
+    letter-spacing: .6px;
+    line-height: 23px;
+}
 h1.logo a {
     color: rgba(255, 255, 255, 0.73);
     text-decoration: none;
@@ -945,6 +977,7 @@ h3.subhead-agileits {
 	padding: 1em 0em;
 }
 .tittle-agileinfo{
+	margin-top: 20px;
 	margin-bottom:2.5em;
 }
 .tittle-agileinfo h3 {
@@ -961,6 +994,20 @@ h3.subhead-agileits {
 .para-agileits-w3layouts {
     font-size: 16px;
     color: #777;
+    letter-spacing: .6px;
+    line-height: 33px;
+}
+.para {
+    font-size: 16px;
+    color: white;
+	padding-bottom: 15px;
+    letter-spacing: .6px;
+    line-height: 33px;
+}
+.para_w {
+    font-size: 16px;
+    color: black;
+	padding-bottom: 15px;
     letter-spacing: .6px;
     line-height: 33px;
 }
@@ -1008,6 +1055,19 @@ h3.subhead-agileits {
     width: 60%;
     float: left;
     background: #0e0e0e;
+}
+.about-right1{
+    padding: 5em 6em;
+    width: 100%;
+ 
+    background: #0e0e0e;
+	text-align: justify;
+}
+.about-rightw{
+    padding: 5em 6em;
+    width: 100%;
+    background: white;
+	text-align: justify;
 }
 .about-right .sim-button {
     width: 192px!important;
@@ -2686,6 +2746,12 @@ h2.typoh2{
 	.about-right {
 		padding: 4em 4em;
 	}
+	.about-right1 {
+		padding: 1em 1em;
+	}
+	.about-rightw {
+		padding: 1em 1em;
+	}
 	.about-left-agileits {
 		min-height: 357px;
 	}
@@ -2851,6 +2917,12 @@ h2.typoh2{
 	}
 	.about-right {
 		padding: 3em 4em;
+	}
+	.about-right1 {
+		padding: 1em 1em;
+	}
+	.about-rightw {
+		padding: 1em 1em;
 	}
 	.about-left-agileits {
 		min-height: 320px;
@@ -3266,6 +3338,12 @@ h2.typoh2{
 	.about-right {
 		padding: 2em 3em;
 	}
+	.about-right1 {
+		padding: 1em 1em;
+	}
+	.about-rightw {
+		padding: 1em 1em;
+	}
 	h3.subheading-agileits-w3layouts, h3.subheading-agileits-w3layouts {
 		font-size: 23px;
 		letter-spacing: 2px;
@@ -3576,6 +3654,9 @@ h2.typoh2{
 	}
 	.about-right {
 		padding: 2em 2em;
+	}
+	.about-right {
+		padding: 1em 1em;
 	}
 	.test-grid1 {
 		padding: 5em 1.3em 1.5em;
