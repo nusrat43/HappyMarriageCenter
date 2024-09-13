@@ -68,7 +68,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li class="dropdown menu__item">
 								<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" data-hover="Pages" role="button" aria-haspopup="true" aria-expanded="false">Policies & Terms<span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="Terms&Condition.php">Terms And Condition</a></li>
+									<li><a href="TermsandCondition.php">Terms And Condition</a></li>
 									<li><a href="PrivacyPolicy.php">Privacy Policy</a></li>
 									<li><a href="ReturnPolicy.php">Return Policy</a></li>
 								</ul>

@@ -13,7 +13,7 @@
 			<ul>
 				<li><a href="index.php">Home</a><span>&#187;</span></li>
 
-				<li>Terms & Condi</li>
+				<li>Terms & Conditions</li>
 			</ul>
 		</div>
 	</div>

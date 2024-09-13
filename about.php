@@ -216,27 +216,27 @@
 	</div>
 </div>
 <!-- //services -->
-<?php
-include 'config.php';
+<!-- <?php
+// include 'config.php';
 
 
-if (isset($_POST['submit'])) {
-	$name = $_POST['Name'];
-	$mobile = $_POST['Mobile'];
-	$email = $_POST['Email'];
-	$address = $_POST['Address'];
-	$sql = "INSERT INTO `services`( `Name`, `Mobile`, `Email`, `Address`) VALUES ('$name','$mobile','$email','$address')";
-	//echo  $sql;
-	if ($conn->query($sql)) {
-		echo "<script>
-                   alert('Your details seved successfully!We will contact you shortly'); 
-              </script>";
-	} else {
-		echo "<BR><BR> Error occured";
-	}
-}
+// if (isset($_POST['submit'])) {
+// 	$name = $_POST['Name'];
+// 	$mobile = $_POST['Mobile'];
+// 	$email = $_POST['Email'];
+// 	$address = $_POST['Address'];
+// 	$sql = "INSERT INTO `services`( `Name`, `Mobile`, `Email`, `Address`) VALUES ('$name','$mobile','$email','$address')";
+// 	//echo  $sql;
+// 	if ($conn->query($sql)) {
+// 		echo "<script>
+//                    alert('Your details seved successfully!We will contact you shortly'); 
+//               </script>";
+// 	} else {
+// 		echo "<BR><BR> Error occured";
+// 	}
+// }
 
-?>
+?> -->
 <?php
 include 'footer.php';
 ?>
