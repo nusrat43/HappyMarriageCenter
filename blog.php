@@ -198,7 +198,7 @@
 
                 </div>
             </div>
-            <!-- <div class="col-lg-4 col-sm-6 mb-4 blog-card">
+            <div class="col-lg-4 col-sm-6 mb-4 blog-card">
                 <a href="blog4.html"><img src="images/blog-profile4.jpg" class="card-img-top" alt="..." /></a>
                 <div class="card-body">
                     <div class="card-heading-container">
@@ -250,7 +250,7 @@
                     <a id="anc" href="blog1.php"><b>Read More...</b> </a>
 
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 </div>
