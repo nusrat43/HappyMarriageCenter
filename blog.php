@@ -146,28 +146,28 @@
         </div>
         <div div class="row card-container">
             <div class="col-lg-4 col-sm-6 mb-4 blog-card">
-                <a href="blog1.html"><img src="images/blog-profile.jpg" class="card-img-top" alt="..." /></a>
+                <a href="blog-details.php"><img src="images/blog-profile.jpg" class="card-img-top" alt="..." /></a>
                 <div class="card-body">
                     <div class="card-heading-container">
-                        <div class="card-heading"><b><a href="blog1.html">Impressive Matrimonial Profile</a></b></div>
+                        <div class="card-heading"><b><a href="blog-details.php">Impressive Matrimonial Profile</a></b></div>
                         <div class="card-date">
-                            <p><a href="blog1.html">8 Sept, 2024</a></p>
+                            <p><a href="blog-details.php">8 Sept, 2024</a></p>
                         </div>
                     </div>
                     <h5 class="card-text">
 
                         Creating an impressive matrimonial profile is about more than just listing your details...
                     </h5>
-                    <a id="anc" href="blog1.php"><b>Read More...</b> </a>
+                    <a id="anc" href="blog-details.php"><b>Read More...</b> </a>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 mb-4 blog-card">
-                <a href="blog2.html"><img src="images/blog-profile2.jpg" class="card-img-top" alt="..." /></a>
+                <a href="blog-details2.php"><img src="images/blog-profile2.jpg" class="card-img-top" alt="..." /></a>
                 <div class="card-body">
                     <div class="card-heading-container">
-                        <div class="card-heading"><b><a href="blog2.html">Happy life after marriage</a></b></div>
+                        <div class="card-heading"><b><a href="blog-details2.php">Happy life after marriage</a></b></div>
                         <div class="card-date">
-                            <p><a href="blog2.html">13 Sept, 2024</a></p>
+                            <p><a href="blog-details2.php">13 Sept, 2024</a></p>
                         </div>
                     </div>
                     <h5 class="card-text">
@@ -175,29 +175,29 @@
                         Tips for happy life after marriage...
 
                     </h5>
-                    <a id="anc" href="blog1.php"><b>Read More...</b> </a>
+                    <a id="anc" href="blog-details2.php"><b>Read More...</b> </a>
 
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 mb-4 blog-card">
-                <a href="blog3.html"> <img src="images/blog-profile3.jpg" class="card-img-top" alt="..." /></a>
+                <a href="blog-details3.php"> <img src="images/blog-profile3.jpg" class="card-img-top" alt="..." /></a>
                 <div class="card-body">
                     <div class="card-heading-container">
-                        <div class="card-heading"><b><a href="blog3.html">Women's Dream Man</a></b></div>
+                        <div class="card-heading"><b><a href="blog-details3.php">The Man of Her Dreams</a></b></div>
                         <div class="card-date">
-                            <p><a href="blog3.html">15 Aug, 2024</a></p>
+                            <p><a href="blog-details3.php">15 Aug, 2024</a></p>
                         </div>
                     </div>
                     <h5 class="card-text">
 
-                        What do women look for in a man of their dreams...
+                        The man of her dreams is not just a handsome face or a charming smile...
 
                     </h5>
-                    <a id="anc" href="blog1.php"><b>Read More...</b> </a>
+                    <a id="anc" href="blog-details3.php"><b>Read More...</b> </a>
 
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6 mb-4 blog-card">
+            <!-- <div class="col-lg-4 col-sm-6 mb-4 blog-card">
                 <a href="blog4.html"><img src="images/blog-profile4.jpg" class="card-img-top" alt="..." /></a>
                 <div class="card-body">
                     <div class="card-heading-container">
@@ -249,7 +249,7 @@
                     <a id="anc" href="blog1.php"><b>Read More...</b> </a>
 
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
