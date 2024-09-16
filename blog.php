@@ -67,6 +67,7 @@
 
         .card-body {
             height: 100px;
+            padding: 10px;
         }
 
         .blog-main {
