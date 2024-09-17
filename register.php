@@ -243,8 +243,7 @@ if (isset($_POST['submit'])) {
 		$sql = "INSERT INTO `login`(`Email`, `Password`) VALUES ('$email','$password')";
 		$conn->query($sql);
 		echo "<script>
-             alert('You have registered successfully! You may Login Now'); 
-               window.location='login.php'; 
+               window.location='payment.php?Email=$email'; 
             </script>";
 	} else {
 		echo "<BR><BR> Error occured";
