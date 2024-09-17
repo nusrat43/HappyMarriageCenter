@@ -248,7 +248,6 @@
 
                     </h5>
                     <a id="anc" href="blog1.php"><b>Read More...</b> </a>
-
                 </div>
             </div>
         </div>
