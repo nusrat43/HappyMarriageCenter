@@ -32,7 +32,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
 	<!--//fonts-->
-
+<style>
+	      li {
+    list-style-type: none;
+}
+   
+</style>
 </head>
 
 <body>

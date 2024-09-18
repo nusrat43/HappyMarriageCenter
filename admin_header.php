@@ -1,8 +1,6 @@
 <head>
     <title> About :: HappyMarriageCenter</title>
-    <?php
-    session_start();
-    ?>
+   
     <!DOCTYPE html>
     <html lang="zxx">
 
@@ -23,7 +21,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </script>
         <!-- //for-mobile-apps -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
         <link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!-- Bootstrap -->
         <link href="css/font-awesome.css" rel="stylesheet"> <!-- Font awesome -->
@@ -86,6 +84,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 background-color: red;
             }
 
+            .searchbar {
+                position: relative;
+                overflow: hidden;
+                backdrop-filter: blur(2px);
+            }
+
+            .searchbar-icon {
+                position: absolute;
+                right: 27px;
+                top: 18px;
+                background-color: transparent;
+                color: black;
+                cursor: pointer;
+            }
+
+            input[type=text] {
+                padding: 9px;
+                border: none;
+                font-size: 18px;
+                background-color: whitesmoke;
+                text-align: left;
+                text-indent: 8px;
+                outline: none;
+            }
+
+            .searchbar,
+            input[type=text] {
+                border-radius: 30px;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+
+            }
 
             /* On screens that are less than 700px wide, make the sidebar into a topbar */
 
@@ -129,6 +158,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 .toggle-btn {
                     display: none;
                 }
+
+            }
+
+            @media screen and (min-width: 700px) {
+                .header-inner {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                }
+
             }
 
             @media screen and (max-width: 1200px) {
@@ -182,6 +221,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 .sidebar.show {
                     transform: translateX(0);
                 }
+
+            }
+
+            li {
+                list-style-type: none;
             }
         </style>
     </head>
@@ -212,9 +256,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="banner-w3ls inner-banner-agileits" id="home">
             <div class="container">
                 <div class="header-inner">
-                    <h1 class="logo">
-                        <a href="index.php"><img src="images/LOGO.png"></a>
-                    </h1>
+                    <div>
+                        <h1 class="logo">
+                            <a href="index.php"><img src="images/LOGO.png"></a>
+                        </h1>
+                    </div>
+                    <div class="topnav">
+                        <div class="searchbar">
+                            <input type="text" name="search" placeholder="Search...">
+                            <span class="searchbar-icon"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
                     <div class="header-right-w3ls">
                         <?php
                         if (isset($_SESSION['Email'])) {
@@ -232,7 +284,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</li>";
                         }
                         ?>
-
                     </div>
                 </div>
             </div>

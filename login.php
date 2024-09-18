@@ -100,37 +100,40 @@
 
 </div>
 <?php
-             if(isset($_POST['submit']))
-             {
-               
-             include 'config.php';
-             $formusername=$_POST['Email'];
-             $formpassword=md5($_POST['Password']);
-             $sql="select * from login where Email='".$formusername."' and Password='".$formpassword."'";
-             $result=$conn->query($sql);
-             
-        
-             if($row = $result->fetch_assoc())
-             {
-				$_SESSION['Email'] = $formusername;
-				$type = $row['Type'];
+include 'config.php'; // Include your database connection
 
-         if ($type == 'Admin') {
-            echo "<script>
-                
-                window.location='ViewAllUser.php'; 
-                </script>";
-         } else if ($type == 'User') {
-            echo "<script>
-                alert('You have Login successfully!'); 
-                window.location='index.php'; 
-                </script>";
-         }
-      } else {
-         echo "Wrong username or password!";
-      }
-   }
-         ?>
+if (isset($_POST['submit'])) {
+    $formusername = $_POST['Email'];
+    $formpassword = md5($_POST['Password']); // Use password_hash in production
+
+    // Prepare the SQL statement
+    $stmt = $conn->prepare("SELECT * FROM login WHERE Email = ? AND Password = ?");
+    $stmt->bind_param("ss", $formusername, $formpassword);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($row = $result->fetch_assoc()) {
+        $_SESSION['Email'] = $formusername;
+        $_SESSION['Type'] = $row['Type']; // Store user type in session
+
+        if ($row['Type'] === 'Admin') {
+			echo "<script>
+			window.location='ViewAllUser.php'; 
+		 </script>";
+            exit();
+        } else {
+			echo "<script>
+			window.location='index.php'; 
+		 </script>"; // Redirect to user dashboard
+            exit();
+        }
+    } else {
+        echo "Wrong username or password!";
+    }
+
+    $stmt->close();
+}
+?>
 
 <!--login-inner-->
 <?php
