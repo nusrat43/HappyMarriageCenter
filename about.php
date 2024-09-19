@@ -145,7 +145,7 @@
 <div class="search-wthree">
 	<div class="container">
 		<h3 class="subheading-agileits-w3layouts">Start your journey with confidence.</h3>
-		<div class="sim-button button12"><a href="matches.php">Search Now</a></div>
+		<div class="sim-button button12"><a href="register.php">Register Now</a></div>
 		<div class="clearfix"> </div>
 	</div>
 </div>
@@ -216,27 +216,27 @@
 	</div>
 </div>
 <!-- //services -->
-<!-- <?php
-// include 'config.php';
+<?php
+include 'config.php';
 
 
-// if (isset($_POST['submit'])) {
-// 	$name = $_POST['Name'];
-// 	$mobile = $_POST['Mobile'];
-// 	$email = $_POST['Email'];
-// 	$address = $_POST['Address'];
-// 	$sql = "INSERT INTO `services`( `Name`, `Mobile`, `Email`, `Address`) VALUES ('$name','$mobile','$email','$address')";
-// 	//echo  $sql;
-// 	if ($conn->query($sql)) {
-// 		echo "<script>
-//                    alert('Your details seved successfully!We will contact you shortly'); 
-//               </script>";
-// 	} else {
-// 		echo "<BR><BR> Error occured";
-// 	}
-// }
+if (isset($_POST['submit'])) {
+	$name = $_POST['Name'];
+	$mobile = $_POST['Mobile'];
+	$email = $_POST['Email'];
+	$address = $_POST['Address'];
+	$sql = "INSERT INTO `services`( `Name`, `Mobile`, `Email`, `Address`) VALUES ('$name','$mobile','$email','$address')";
+	//echo  $sql;
+	if ($conn->query($sql)) {
+		echo "<script>
+                   alert('Your details seved successfully!We will contact you shortly'); 
+              </script>";
+	} else {
+		echo "<BR><BR> Error occured";
+	}
+}
 
-?> -->
+?>
 <?php
 include 'footer.php';
 ?>

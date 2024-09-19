@@ -32,12 +32,64 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
 	<!--//fonts-->
-<style>
-	      li {
-    list-style-type: none;
-}
-   
-</style>
+	<style>
+		li {
+			list-style-type: none;
+		}
+
+		p {
+			text-align: justify;
+		}
+
+		.app-img {
+			object-fit: cover;
+			height: 300px;
+			width: 350px;
+		}
+
+		#img {
+			margin: 100px;
+			width: 100%;
+			height: 100%;
+			border-radius: 30% 70% 48% 52% / 55% 42% 58% 45%;
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+		}
+
+		#img2 {
+			margin: 0 150px;
+			width: 100%;
+			height: 100%;
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+		}
+
+		@media screen and (max-width: 992px) {
+			#img {
+				margin: 0px;
+				margin-top: 10px;
+				width: 300px;
+				border-radius: 0;
+				box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+			}
+
+			#img2 {
+				margin: 0px;
+				margin-top: 10px;
+				width: 300px;
+				box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+			}
+
+			.main-app-img {
+				display: flex;
+				justify-content: center;
+			}
+
+			.app-img {
+				object-fit: cover;
+				height: 300px;
+
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -66,7 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li class="dropdown menu__item">
 								<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" data-hover="Pages" role="button" aria-haspopup="true" aria-expanded="false">Policies & Terms<span class="caret"></span></a>
 								<ul class="dropdown-menu">
-								<li><a href="TermsandCondition.php">Terms And Condition</a></li>
+									<li><a href="TermsandCondition.php">Terms And Condition</a></li>
 									<li><a href="PrivacyPolicy.php">Privacy Policy</a></li>
 									<li><a href="ReturnPolicy.php">Return Policy</a></li>
 								</ul>
@@ -155,63 +207,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--//home-->
 	<!--banner end here-->
-	<!-- services -->
-	<div class="services" id="services">
+	<!--//mobile-app -->
+	<div class="elite-app">
 		<div class="container">
-			<div class="tittle-agileinfo">
-				<h3>Assisted Services</h3>
-			</div>
-			<div class="col-md-6 w3_agileits_services_grids">
-				<div class="w3_agileits_services_grid">
-					<div class="w3_agileits_services_grid_agile">
-						<div class="w3_agileits_services_grid_1">
-							<i class="fa fa-search" aria-hidden="true"></i>
-						</div>
-						<h3>Search within reach</h3>
+			<div class="app-inner agile-w3l">
+				<div class="col-md-6 app-info">
+					<h4>Happy Marriage Center</h4>
+					<p class="para-agileits-w3layouts">Welcome to our matrimonial platform, where love stories begin! We believe that every individual is unique, and finding the right partner is a journey worth taking. Our mission is to connect like-minded individuals who are ready to embark on the adventure of a lifetime together. Whether you’re looking for a deep emotional connection, shared values, or simply a companion to share life’s joys, our diverse profiles and personalized matchmaking process are designed to help you find your perfect match. Join us today and take the first step towards a beautiful future filled with love and companionship!</p>
+					<p class="para-agileits-w3layouts"><a href="#">Click here </a>to know more about apps.</p>
+				</div>
+				<div class="main-app-img">
+					<div class="col-md-6 app-img">
+						<img id="img" src="images/google3.jpg" alt=" " class="img-responsive">
 					</div>
 				</div>
-				<div class="w3_agileits_services_grid">
-					<div class="w3_agileits_services_grid_agile">
-						<div class="w3_agileits_services_grid_1">
-							<i class="fa fa-list-alt" aria-hidden="true"></i>
-						</div>
-						<h3>Shortlisted matches</h3>
-					</div>
-				</div>
-				<div class="w3_agileits_services_grid">
-					<div class="w3_agileits_services_grid_agile">
-						<div class="w3_agileits_services_grid_1">
-							<i class="fa fa-phone" aria-hidden="true"></i>
-						</div>
-						<h3>Initiate communication</h3>
-					</div>
-				</div>
-				<div class="w3_agileits_services_grid">
-					<div class="w3_agileits_services_grid_agile">
-						<div class="w3_agileits_services_grid_1">
-							<i class="fa fa-users" aria-hidden="true"></i>
-						</div>
-						<h3>Meet the prospects</h3>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="col-md-6 regstr-r-w3-agileits">
-				<div class="form-bg-w3ls">
-					<h3 class="subhead-agileits white-w3ls">Interested in assisted services....?</h3>
-					<p class="para-agileits-w3layouts">Leave your details below, we'll call you back.</p>
-					<form method="post" onsubmit="return CheckInputvalue()">
-						<input type="text" name="Name" placeholder="Full name" required="">
-						<input type="text" name="Mobile" placeholder="Mobile Number" required="" id="mobile"> <span id="mobileresult"></span>
-						<input type="email" name="Email" placeholder="Email" required="">
-						<textarea name="Address" placeholder="Enter your Address" required=""></textarea>
-						<input type="submit" value="Submit" name="submit" class="button-w3layouts hvr-rectangle-out">
-					</form>
-				</div>
+				<div class="clearfix"></div>
 			</div>
 		</div>
 	</div>
-	<!-- //services -->
+	<!--//mobile-app -->
 
 	<!-- about -->
 	<div class="about-w3layouts" id="about">
@@ -240,7 +254,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="search-wthree">
 		<div class="container">
 			<h3 class="subheading-agileits-w3layouts">Start your journey with confidence.</h3>
-			<div class="sim-button button12"><a href="matches.php">Search Now</a></div>
+			<div class="sim-button button12"><a href="register.php">Register Now</a></div>
 			<div class="clearfix"> </div>
 		</div>
 	</div>
@@ -248,8 +262,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--middle-section -->
 	<div class="middle-section-agileits-w3layouts">
 		<div class="container">
-			<h3 class="subheading-agileits-w3layouts"><span>Elite </span>Match</h3>
-			<p class="para-w3layouts">Exclusive Matchmaking Service for the Elite</p>
+			<h3 class="subheading-agileits-w3layouts"><span>Happy </span>Marriage <span>Center</span></h3>
+			<p class="para-w3layouts">Exclusive Matchmaking Service for our Members</p>
 			<div class="sim-button button12"><a href="contact.php">Contact Us</a></div>
 		</div>
 	</div>
@@ -258,18 +272,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="elite-app">
 		<div class="container">
 			<div class="app-inner agile-w3l">
-				<div class="col-md-5 app-info">
-					<h4>Elite Match Apps</h4>
-					<p class="para-agileits-w3layouts">Nam arcu mauris, tincidunt sed convallis non, egestas ut lacus. Cras sapien urna, malesuada ut varius consequat, hendrerit nisl. Aliquam vestibulum, odio non ullamcorper malesuada.</p>
-					<div class="app-devices">
-						<a href="#"><img src="images/app.png" alt=""></a>
-						<a href="#"><img src="images/app1.png" alt=""></a>
-						<div class="clearfix"> </div>
-					</div>
-					<p class="para-agileits-w3layouts"><a href="#">Click here </a>to know more about apps.</p>
+				<div class="col-md-6 app-info">
+					<h4>Safety & Privacy</h4>
+					<p class="para-agileits-w3layouts">Your safety and privacy are our top priorities. We implement strict measures to protect your personal information and provide a safe environment for you to connect with others. Our team is dedicated to ensuring a respectful and secure experience for all members.</p>
 				</div>
-				<div class="col-md-7 app-img">
-					<img src="images/screens1.png" alt=" " class="img-responsive">
+				<div class="main-app-img">
+					<div class="col-md-5 app-img">
+						<img id="img2" src="images/privacy.jpeg" alt=" " class="img-responsive">
+					</div>
 				</div>
 				<div class="clearfix"></div>
 			</div>
