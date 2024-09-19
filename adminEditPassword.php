@@ -1,16 +1,3 @@
-<?php
-
-session_start();
-// Function to check if the user is an admin
-function checkAdminAccess() {
-    if (!isset($_SESSION['Type']) || $_SESSION['Type'] !== 'Admin') {
-        header('Location:unauthorized.php'); // Redirect to unauthorized page
-        exit();
-    }
-}
-
-checkAdminAccess(); // Check access before displaying the page
-?>
 <head>
 	<title> About :: HappyMarriageCenter</title>
 

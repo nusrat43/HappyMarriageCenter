@@ -2,7 +2,7 @@
 <title> About :: HappyMarriageCenter</title>
 
 <?php
-include 'header.php' ;
+include 'adminheader.php' ;
 ?>
 </head>
 <!-- breadcrumbs -->
