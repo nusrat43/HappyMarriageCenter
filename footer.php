@@ -26,7 +26,23 @@
 						<i class="fa fa-heart-o heart2" aria-hidden="true"></i>
 					</div>
 				</div>
-				<div class="sim-button button12"><a href="contact.php">Contact Us</a></div>
+
+				<?php
+				include "config.php";
+				$sql = "UPDATE `visitors` SET `visit`=visit+1";
+				$conn->query($sql);
+
+				?>
+				<div class="sim-button button12"><b style="font-size: larger;">Total visitors :  <b/>
+					<?php
+					$sql = "select visit from visitors";
+					$result = $conn->query($sql);
+					$row = $result->fetch_assoc();
+
+					$cnt = $row['visit'];
+					echo $cnt;
+					?>
+				</div>
 				<h2>We’re Committed to Service Excellence.</h2>
 			</div>
 		</div>
@@ -56,6 +72,20 @@
 </div>
 </div>
 <!--/footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- js -->
 <script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
 <!-- script for responsive tabs -->

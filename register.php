@@ -111,6 +111,10 @@
 					<span>Country</span>
 					<input type="text" name="Country" placeholder="Country" required="">
 				</div>
+				<div class="w3_form_body_grid w3_form_body_grid1">
+					<span>Mobile No</span> 
+					<input type="text" name="Mobile_no" placeholder="Mobile No" required="">
+				</div>
 				<div class="w3_form_body_grid">
 					<span>Email</span>
 					<input type="email" name="Email" placeholder="Email" required="">
@@ -231,9 +235,10 @@ if (isset($_POST['submit'])) {
 	$Date_of_birth = $_POST['DOB'];
 	$religion = $_POST['Religion'];
 	$country = $_POST['Country'];
+	$mobile= $_POST['Mobile_no'];
 	$email = $_POST['Email']; //normal variable can be accessed only in one webpage
 	$password = md5($_POST['Password']);
-	$sql = "INSERT INTO `register`(`Profile_For`, `Name`, `Gender`, `D_O_B`, `Religion`, `Country`, `Email`, `Password`,`Profile_Pic`) VALUES ('$profile_for','$name','$gender','$Date_of_birth','$religion','$country','$email','$password','$target_file')";
+	$sql = "INSERT INTO `register`(`Profile_For`, `Name`, `Gender`, `D_O_B`, `Religion`, `Country`,`MobileNo`,`Email`, `Password`,`Profile_Pic`) VALUES ('$profile_for','$name','$gender','$Date_of_birth','$religion','$country','$mobile','$email','$password','$target_file')";
 	//echo  $sql;
 
 

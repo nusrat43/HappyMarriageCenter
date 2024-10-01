@@ -2,7 +2,8 @@
 
 session_start();
 // Function to check if the user is an admin
-function checkAdminAccess() {
+function checkAdminAccess()
+{
     if (!isset($_SESSION['Type']) || $_SESSION['Type'] !== 'Admin') {
         header('Location:unauthorized.php'); // Redirect to unauthorized page
         exit();
@@ -11,9 +12,10 @@ function checkAdminAccess() {
 
 checkAdminAccess(); // Check access before displaying the page
 ?>
+
 <head>
     <title> About :: HappyMarriageCenter</title>
-   
+
     <!DOCTYPE html>
     <html lang="zxx">
 
@@ -122,6 +124,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 outline: none;
             }
 
+            h1.logo img {
+                height: 160px;
+                width: 200px;
+                float: left;
+                padding-top: 0;
+                margin-right: 600px;
+            }
+
             .searchbar,
             input[type=text] {
                 border-radius: 30px;
@@ -172,6 +182,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     display: none;
                 }
 
+                .container .search-container{
+                    /* display: flex; */
+                    flex-wrap: nowrap;
+                }
             }
 
             @media screen and (min-width: 700px) {
@@ -262,6 +276,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <a href="enable.php">Enable/Disable User </a>
         <a href="adminEditPassword.php">Change Password</a>
         <a href="matches.php">Matches</a>
+        <a href="Search.php">Search</a>
         <a href="editUserType.php">Change User Type</a>
     </div>
 
@@ -274,12 +289,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <a href="index.php"><img src="images/LOGO.png"></a>
                         </h1>
                     </div>
-                    <div class="topnav">
+                    <!-- <div class="topnav">
                         <div class="searchbar">
                             <input type="text" name="search" placeholder="Search...">
                             <span class="searchbar-icon"><i class="fas fa-search"></i></span>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="header-right-w3ls">
                         <?php
                         if (isset($_SESSION['Email'])) {

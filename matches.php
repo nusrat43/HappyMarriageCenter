@@ -33,7 +33,7 @@
 include 'config.php';
 
 
-$sql = "SELECT `id`, `Name`, `Gender`, `Age`, `Height`, `Religion`, `caste`, `Marital_status`, `Profile_For`, `Profession`, `Country`, `About`, `Photo`, `Education`, `Diet`, `Language`, `Blood_Group`, `Complexion`, `Weight`, `F_Name`, `F_Occu`, `M_Name`, `M_Occu`, `No_Brothers`, `No_Sisters`, `I_age`, `I_MaritalStatus`, `I_Complexion`, `I_Height`, `I_Religion`, `I_Caste`, `I_Diet` FROM `profile`";
+$sql = "SELECT `id`, `Name`, `Gender`, `Age`, `Height`, `Religion`, `caste`, `Marital_status`, `Profile_For`,`creator_name`, `Profession`, `Country`,`city`, `About`, `Photo`, `Education`, `Diet`, `Language`, `Blood_Group`, `Complexion`, `Weight`, `F_Name`, `F_Occu`, `M_Name`, `M_Occu`, `No_Brothers`, `No_Sisters`, `I_age`, `I_MaritalStatus`, `I_Complexion`, `I_Height`, `I_Religion`, `I_Caste`, `I_Diet` FROM `profile`";
 
 $result = $conn->query($sql);
 
@@ -48,8 +48,10 @@ while ($row = $result->fetch_assoc()) {
 	$caste = $row['caste'];
 	$marital_status = $row['Marital_status'];
 	$profile_for = $row['Profile_For'];
+	$creator = $row['creator_name'];
 	$profession = $row['Profession'];
 	$country = $row['Country'];
+	$city = $row['city'];
 	$about = $row['About'];
 	$photo = $row['Photo'];
 	// ----- breadcrumbs  ---- 
@@ -74,7 +76,9 @@ while ($row = $result->fetch_assoc()) {
 				<li><span>Profession</span>: $profession</li>
 				<li><span>Marital Status</span>: $marital_status</li>
 				<li><span>Profile Created By</span>:$profile_for</li>
-				<li><span>Location</span>: $country</li>
+				<li><span>Profile Creator Name</span>:  $creator</li>
+				<li><span>City</span>: $city</li>
+				<li><span>Country</span>: $country</li>
 				<li><a href='single1.php?id=$id'>Express Interest</a><a href='single1.php'>Send mail</a></li>";
 	echo "</ul>
 		</div>

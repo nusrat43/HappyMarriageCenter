@@ -164,7 +164,7 @@ if (isset($_POST['submit'])) {
 	/////////////////Phot Upload Code
 
 	$target_dir = "uploads/"; // Specify the directory where the file will be uploaded
-	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$target_file = $target_dir . basename($_FILES["Screenshot"]["name"]);
 	$uploadOk = 1;
 	$fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
@@ -192,8 +192,8 @@ if (isset($_POST['submit'])) {
 		echo "Sorry, your file was not uploaded.";
 	} else {
 		// If everything is ok, try to upload the file
-		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-			echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+		if (move_uploaded_file($_FILES["Screenshot"]["tmp_name"], $target_file)) {
+			echo "The file " . htmlspecialchars(basename($_FILES["Screenshot"]["name"])) . " has been uploaded.";
 		} else {
 			echo "Sorry, there was an error uploading your file.";
 		}

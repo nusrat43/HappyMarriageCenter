@@ -145,10 +145,18 @@
                                 <input type="text" id="marital_status" name="marital_status" placeholder="Enter your Marital Status">
                             </div>
                             <div class="form-group">
-                                <label for="height">Profile Created By :</label>
-                                <select id="w3_country" onchange="change_country(this.value)" class="frm-field required" name="profile_for">
+                                <label for="profession">Profession : </label>
+                                <input type="text" id="profession" name="profession" placeholder="Enter your Profession">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Profile_create">Profile Created By :</label>
+                                <select id="Profile_create" onchange="change_country(this.value)" class="frm-field required" name="profile_for">
                                     <option selected="selected"></option>
                                     <option value="Myself">Myself</option>
+                                    <option value="Father">Father</option>
                                     <option value="Son">Son</option>
                                     <option value="Daughter">Daughter</option>
                                     <option value="Brother">Brother</option>
@@ -157,16 +165,19 @@
                                     <option value="Friend">Friend</option>
                                 </select>
                             </div>
-                        </div>
-
-                        <div class="form-row">
                             <div class="form-group">
-                                <label for="profession">Profession : </label>
-                                <input type="text" id="profession" name="profession" placeholder="Enter your Profession">
+                                <label for="creator_name">Creator Name :</label>
+                                <input type="text" name="creator_name" placeholder="creater name" id="creator_name" required="" value=''>
                             </div>
+                        </div>
+                        <div class="form-row">
                             <div class="form-group">
                                 <label for="country">Country :</label>
                                 <input type="text" name="country" placeholder="country" required="" value=''>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City :</label>
+                                <input type="text" name="city" placeholder="city" required="" value=''>
                             </div>
                         </div>
 
@@ -179,6 +190,13 @@
                                 <label for="photo">Your Photo :</label>
                                 <input type="file" name="fileToUpload" required="" value='' id="photo">
                             </div>
+                        </div>
+                        <div class="form-row">
+                        <div class="form-group">
+                                <label for="biodata">Your Resume :</label>
+                                <input type="file" name="biodata" required="" value='' id="biodata">
+                            </div>
+                            <div class="form-group"></div>
                         </div>
 
                         <fieldset>
@@ -263,7 +281,7 @@
 
                         <fieldset>
                             <legend>
-                                <h3>What She Is Looking For
+                                <h3>What You Is Looking For
                                 </h3>
                             </legend>
 
@@ -330,138 +348,140 @@
             </div>
         </div>
 
-        
-<?php
-include 'config.php';
+
+        <?php
+        include 'config.php';
 
 
-if (isset($_POST['submit'])) {
+        if (isset($_POST['submit'])) {
 
-	/////////////////Phot Upload Code
+            /////////////////Phot Upload Code
 
-	 $target_dir = "uploads/"; // Specify the directory where the file will be uploaded
-	 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-	 $uploadOk = 1;
-	 $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+            $target_dir = "uploads/"; // Specify the directory where the file will be uploaded
+            $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+            $uploadOk = 1;
+            $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-	 // Check if file already exists
-	 if (file_exists($target_file)) {
-		echo "Sorry, file already exists.";
-		$uploadOk = 0;
-	 }
+            // Check if file already exists
+            if (file_exists($target_file)) {
+                echo "Sorry, file already exists.";
+                $uploadOk = 0;
+            }
 
-	 // Check file size (limit to 5MB)
-	 if ($_FILES["fileToUpload"]["size"] > 5000000) {
-		echo "Sorry, your file is too large.";
-		$uploadOk = 0;
-	 }
+            // Check file size (limit to 5MB)
+            if ($_FILES["fileToUpload"]["size"] > 5000000) {
+                echo "Sorry, your file is too large.";
+                $uploadOk = 0;
+            }
 
-	 // Allow certain file formats
-	 $allowedTypes = array("jpg", "png", "jpeg", "gif");
-	 if (!in_array($fileType, $allowedTypes)) {
-		echo "Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed.";
-		$uploadOk = 0;
-	 }
+            // Allow certain file formats
+            $allowedTypes = array("jpg", "png", "jpeg", "gif");
+            if (!in_array($fileType, $allowedTypes)) {
+                echo "Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed.";
+                $uploadOk = 0;
+            }
 
-	 // Check if $uploadOk is set to 0 by an error
-	 if ($uploadOk == 0) {
-		echo "Sorry, your file was not uploaded.";
-	 } else {
-		// If everything is ok, try to upload the file
-		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-		   echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
-		} else {
-		   echo "Sorry, there was an error uploading your file.";
-		}
-	 }
+            // Check if $uploadOk is set to 0 by an error
+            if ($uploadOk == 0) {
+                echo "Sorry, your file was not uploaded.";
+            } else {
+                // If everything is ok, try to upload the file
+                if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                    echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+                } else {
+                    echo "Sorry, there was an error uploading your file.";
+                }
+            }
 
-      /********************************* Resume Upload Coad******************************************/
-      
-      $target_dir = "uploads/userResume/"; // Specify the directory where the file will be uploaded
-      $target_file1 = $target_dir . basename($_FILES["resumeToUpload"]["name"]);
-      $uploadOk = 1;
-      $fileType = strtolower(pathinfo($target_file1, PATHINFO_EXTENSION));
+            /********************************* Resume Upload Coad******************************************/
 
-      // Check if file already exists
-      if (file_exists($target_file1)) {
-         echo "Sorry, file already exists.";
-         $uploadOk = 0;
-      }
+              $target_dir = "uploads/"; // Specify the directory where the file will be uploaded
+              $target_file1 = $target_dir . basename($_FILES["biodata"]["name"]);
+              $uploadOk = 1;
+              $fileType = strtolower(pathinfo($target_file1, PATHINFO_EXTENSION));
 
-      // Check file size (limit to 5MB)
-      if ($_FILES["resumeToUpload"]["size"] > 500000000) {
-         echo "Sorry, your file is too large.";
-         $uploadOk = 0;
-      }
+              // Check if file already exists
+              if (file_exists($target_file1)) {
+                 echo "Sorry, file already exists.";
+                 $uploadOk = 0;
+              }
 
-      // Allow certain file formats
-      $allowedTypes = array("pdf", ".docx");
-      if (!in_array($fileType, $allowedTypes)) {
-         echo "Sorry, only PDF,DOCX files are allowed.";
-         $uploadOk = 0;
-      }
+              // Check file size (limit to 5MB)
+              if ($_FILES["biodata"]["size"] > 500000000) {
+                 echo "Sorry, your file is too large.";
+                 $uploadOk = 0;
+              }
 
-      // Check if $uploadOk is set to 0 by an error
-      if ($uploadOk == 0) {
-         echo "Sorry, your file was not uploaded.";
-      } else {
-         // If everything is ok, try to upload the file
-         if (move_uploaded_file($_FILES["resumeToUpload"]["tmp_name"], $target_file1)) {
-            echo "The file " . htmlspecialchars(basename($_FILES["resumeToUpload"]["name"])) . " has been uploaded.";
-         } else {
-            echo "Sorry, there was an error uploading your file.";
-         }
-      }
+              // Allow certain file formats
+              $allowedTypes = array("pdf", ".docx");
+              if (!in_array($fileType, $allowedTypes)) {
+                 echo "Sorry, only PDF,DOCX files are allowed.";
+                 $uploadOk = 0;
+              }
+
+              // Check if $uploadOk is set to 0 by an error
+              if ($uploadOk == 0) {
+                 echo "Sorry, your file was not uploaded.";
+              } else {
+                 // If everything is ok, try to upload the file
+                 if (move_uploaded_file($_FILES["biodata"]["tmp_name"], $target_file1)) {
+                    echo "The file " . htmlspecialchars(basename($_FILES["biodata"]["name"])) . " has been uploaded.";
+                 } else {
+                    echo "Sorry, there was an error uploading your file.";
+                 }
+              }
 
 
-	
-	$name = $_POST['Name'];
-	$gender = $_POST['Gender'];
-	$age=$_POST['age'];
-    $height=$_POST['height'];
-	$religion = $_POST['Religion'];
-    $caste=$_POST['caste'];
-    $Material_Status=$_POST['marital_status'];
-    $profile_for=$_POST['profile_for'];
-    $Profession=$_POST['profession'];
-	$country = $_POST['country'];
-	$Message=$_POST['message'];
-    $Education=$_POST['education'];
-    $Diet=$_POST['diet'];
-    $Language=$_POST['motherTongue'];
-    $BloodGroup=$_POST['bloodGroup'];
-    $Complexion=$_POST['complexion'];
-    $Weight=$_POST['weight'];
-    $Father_Name=$_POST['father_name'];
-    $Father_Occu=$_POST['F_Occupation'];
-    $Mother_Name=$_POST['mother_name'];
-    $Mother_Occu=$_POST['m_Occupation'];
-    $No_Brother=$_POST['no_Brother'];
-    $No_Sister=$_POST['no_Sister'];
-    $I_Age=$_POST['i_age'];
-    $I_MaritalStatus=$_POST['I_marital_status'];
-    $I_Complexion=$_POST['I_complexion'];
-    $I_Height=$_POST['I_height'];
-    $I_religion=$_POST['religion'];
-    $I_Caste=$_POST['i_caste'];
-    $I_diet=$_POST['i_diet'];
-	$sql="INSERT INTO `profile`(`Name`, `Gender`, `Age`, `Height`, `Religion`, `caste`, `Marital_status`, `Profile_For`, `Profession`, `Country`, `About`, `Photo`, `Education`, `Diet`, `Language`, `Blood_Group`, `Complexion`, `Weight`, `F_Name`, `F_Occu`, `M_Name`, `M_Occu`, `No_Brothers`, `No_Sisters`, `I_age`, `I_MaritalStatus`, `I_Complexion`, `I_Height`, `I_Religion`, `I_Caste`, `I_Diet`) VALUES ('$name','$gender','$age','$height','$religion','$caste','$Material_Status','$profile_for','$Profession','$country','$Message','$target_file','$Education','$Diet','$Language','$BloodGroup','$Complexion','$Weight','$Father_Name','$Father_Occu','$Mother_Name','$Mother_Occu','$No_Brother','$No_Sister','$I_Age','$I_MaritalStatus','$I_Complexion','$I_Height','$I_religion','$I_Caste','$I_diet')";
-	//echo  $sql;
-	
 
-	if ($conn->query($sql)) {
-		
-		echo "<script>
+            $name = $_POST['Name'];
+            $gender = $_POST['Gender'];
+            $age = $_POST['age'];
+            $height = $_POST['height'];
+            $religion = $_POST['Religion'];
+            $caste = $_POST['caste'];
+            $Material_Status = $_POST['marital_status'];
+            $profile_for = $_POST['profile_for'];
+            $creator_name = $_POST['creator_name'];
+            $Profession = $_POST['profession'];
+            $country = $_POST['country'];
+            $city=$_POST['city'];
+            $Message = $_POST['message'];
+            $Education = $_POST['education'];
+            $Diet = $_POST['diet'];
+            $Language = $_POST['motherTongue'];
+            $BloodGroup = $_POST['bloodGroup'];
+            $Complexion = $_POST['complexion'];
+            $Weight = $_POST['weight'];
+            $Father_Name = $_POST['father_name'];
+            $Father_Occu = $_POST['F_Occupation'];
+            $Mother_Name = $_POST['mother_name'];
+            $Mother_Occu = $_POST['m_Occupation'];
+            $No_Brother = $_POST['no_Brother'];
+            $No_Sister = $_POST['no_Sister'];
+            $I_Age = $_POST['i_age'];
+            $I_MaritalStatus = $_POST['I_marital_status'];
+            $I_Complexion = $_POST['I_complexion'];
+            $I_Height = $_POST['I_height'];
+            $I_religion = $_POST['religion'];
+            $I_Caste = $_POST['i_caste'];
+            $I_diet = $_POST['i_diet'];
+            $sql = "INSERT INTO `profile`(`Name`, `Gender`, `Age`, `Height`, `Religion`, `caste`, `Marital_status`, `Profile_For`,`creator_name`, `Profession`, `Country`,`city`, `About`, `Photo`, `biodata`, `Education`, `Diet`, `Language`, `Blood_Group`, `Complexion`, `Weight`, `F_Name`, `F_Occu`, `M_Name`, `M_Occu`, `No_Brothers`, `No_Sisters`, `I_age`, `I_MaritalStatus`, `I_Complexion`, `I_Height`, `I_Religion`, `I_Caste`, `I_Diet`) VALUES ('$name','$gender','$age','".$conn -> real_escape_string($height)."','$religion','$caste','$Material_Status','$profile_for','$creator_name','$Profession','$country','$city','".$conn -> real_escape_string($Message)."','$target_file','$target_file1','$Education','$Diet','$Language','$BloodGroup','$Complexion','$Weight','$Father_Name','$Father_Occu','$Mother_Name','$Mother_Occu','$No_Brother','$No_Sister','$I_Age','$I_MaritalStatus','$I_Complexion','$I_Height','$I_religion','$I_Caste','$I_diet')";
+            //echo  $sql;
+
+
+            if ($conn->query($sql)) {
+
+                echo "<script>
              alert('Your account has beed created successfully!'); 
                window.location='matches.php'; 
             </script>";
-	} else {
-		echo "<BR><BR> Error occured";
-	}
-	// echo "<script>alert('$Date_of_birth')</script>";
-}
+            } else {
+                echo "<BR><BR> Error occured";
+            }
+            // echo "<script>alert('$Date_of_birth')</script>";
+        }
 
-?>
+        ?>
 
 
 
