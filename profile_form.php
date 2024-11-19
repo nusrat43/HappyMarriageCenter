@@ -182,21 +182,26 @@
                         </div>
 
                         <div class="form-row">
+                        <div class="form-group">
+                                <label for="mobile">Contact No :</label>
+                                <input type="text" name="mobile" required="" value='' placeholder="Contact Number" id="mobile">
+                            </div>
                             <div class="form-group">
                                 <label for="message">About Your Self : </label>
                                 <textarea name="message" placeholder="message" required="" id="message"></textarea>
                             </div>
-                            <div class="form-group">
+                           
+                        </div>
+                        <div class="form-row">
+                        <div class="form-group">
                                 <label for="photo">Your Photo :</label>
                                 <input type="file" name="fileToUpload" required="" value='' id="photo">
                             </div>
-                        </div>
-                        <div class="form-row">
                         <div class="form-group">
                                 <label for="biodata">Your Resume :</label>
                                 <input type="file" name="biodata" required="" value='' id="biodata">
                             </div>
-                            <div class="form-group"></div>
+                           
                         </div>
 
                         <fieldset>
@@ -445,6 +450,7 @@
             $Profession = $_POST['profession'];
             $country = $_POST['country'];
             $city=$_POST['city'];
+            $mobileno=$_POST['mobile'];
             $Message = $_POST['message'];
             $Education = $_POST['education'];
             $Diet = $_POST['diet'];
@@ -465,7 +471,7 @@
             $I_religion = $_POST['religion'];
             $I_Caste = $_POST['i_caste'];
             $I_diet = $_POST['i_diet'];
-            $sql = "INSERT INTO `profile`(`Name`, `Gender`, `Age`, `Height`, `Religion`, `caste`, `Marital_status`, `Profile_For`,`creator_name`, `Profession`, `Country`,`city`, `About`, `Photo`, `biodata`, `Education`, `Diet`, `Language`, `Blood_Group`, `Complexion`, `Weight`, `F_Name`, `F_Occu`, `M_Name`, `M_Occu`, `No_Brothers`, `No_Sisters`, `I_age`, `I_MaritalStatus`, `I_Complexion`, `I_Height`, `I_Religion`, `I_Caste`, `I_Diet`) VALUES ('$name','$gender','$age','".$conn -> real_escape_string($height)."','$religion','$caste','$Material_Status','$profile_for','$creator_name','$Profession','$country','$city','".$conn -> real_escape_string($Message)."','$target_file','$target_file1','$Education','$Diet','$Language','$BloodGroup','$Complexion','$Weight','$Father_Name','$Father_Occu','$Mother_Name','$Mother_Occu','$No_Brother','$No_Sister','$I_Age','$I_MaritalStatus','$I_Complexion','$I_Height','$I_religion','$I_Caste','$I_diet')";
+            $sql = "INSERT INTO `profile`(`Name`, `Gender`, `Age`, `Height`, `Religion`, `caste`, `Marital_status`, `Profile_For`,`creator_name`, `Profession`, `Country`,`city`,`MobileNo`, `About`, `Photo`, `biodata`, `Education`, `Diet`, `Language`, `Blood_Group`, `Complexion`, `Weight`, `F_Name`, `F_Occu`, `M_Name`, `M_Occu`, `No_Brothers`, `No_Sisters`, `I_age`, `I_MaritalStatus`, `I_Complexion`, `I_Height`, `I_Religion`, `I_Caste`, `I_Diet`) VALUES ('$name','$gender','$age','".$conn -> real_escape_string($height)."','$religion','$caste','$Material_Status','$profile_for','$creator_name','$Profession','$country','$city','$mobileno','".$conn -> real_escape_string($Message)."','$target_file','$target_file1','$Education','$Diet','$Language','$BloodGroup','$Complexion','$Weight','$Father_Name','$Father_Occu','$Mother_Name','$Mother_Occu','$No_Brother','$No_Sister','$I_Age','$I_MaritalStatus','$I_Complexion','$I_Height','$I_religion','$I_Caste','$I_diet')";
             //echo  $sql;
 
 

@@ -25,7 +25,7 @@
 include 'config.php';
 $id = $_GET['id'];
 
-$sql = "SELECT `Name`, `Gender`, `Age`, `Height`, `Religion`, `caste`, `Marital_status`, `Profile_For`,`creator_name`, `Profession`, `Country`,`city`, `About`, `biodata`, `Photo`, `Education`, `Diet`, `Language`, `Blood_Group`, `Complexion`, `Weight`, `F_Name`, `F_Occu`, `M_Name`, `M_Occu`, `No_Brothers`, `No_Sisters`, `I_age`, `I_MaritalStatus`, `I_Complexion`, `I_Height`, `I_Religion`, `I_Caste`, `I_Diet` FROM `profile` WHERE id=$id";
+$sql = "SELECT `Name`, `Gender`, `Age`, `Height`, `Religion`, `caste`, `Marital_status`, `Profile_For`,`creator_name`, `Profession`, `Country`,`city`, `MobileNo`,`About`, `biodata`, `Photo`, `Education`, `Diet`, `Language`, `Blood_Group`, `Complexion`, `Weight`, `F_Name`, `F_Occu`, `M_Name`, `M_Occu`, `No_Brothers`, `No_Sisters`, `I_age`, `I_MaritalStatus`, `I_Complexion`, `I_Height`, `I_Religion`, `I_Caste`, `I_Diet` FROM `profile` WHERE id=$id";
 
 $result = $conn->query($sql);
 echo "<div class='matches elite-app'>
@@ -45,6 +45,7 @@ while ($row = $result->fetch_assoc()) {
 	$profession = $row['Profession'];
 	$country = $row['Country'];
 	$city = $row['city'];
+	$mobile=$row['MobileNo'];
 	$about = $row['About'];
 	$biodata = $row['biodata'];
 	$photo = $row['Photo'];
@@ -86,6 +87,7 @@ while ($row = $result->fetch_assoc()) {
 				<li><span>Marital Status</span>: $marital_status</li>
 				<li><span>Profile Created By</span>:  $profile_for</li>
 				<li><span>Profile Creator Name</span>:  $creator</li>
+				<li><span>Contact Number</span>:  $mobile</li>
 				<li><span>City</span>: $city</li>
 				<li><span>Country</span>: $country</li>
 				<li class='pdf'><span>To View Her Biodata</span>:<a href='$biodata'><img src='images/pdf-icon.png'></li>";

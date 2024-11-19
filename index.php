@@ -243,7 +243,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<div class="about-right">
-			<h3 class="subheading-agileits-w3layouts"><span>Elite </span>Find Success Stories</h3>
+			<h3 class="subheading-agileits-w3layouts"><span>Happy Marriage </span>Find Success Stories</h3>
 			<p class="para-agileits-w3layouts">Duis sit amet nisi quis leo fermentum vestibulum vitae eget augue. Nulla quam nunc, vulputate id urna at, tempor tincidunt metus. Sed feugiat quam nec mauris mattis malesuada.</p>
 			<div class="sim-button button12"><a href="matches.php">View Profiles</a></div>
 		</div>

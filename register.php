@@ -36,6 +36,19 @@
 			margin: 0.6em 0;
 		}
 	</style>
+	<!-- <script>
+		function showCourse(id){
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange=function(){
+				if(this.readyState == 4 && this.status == 200){
+					document.getElementById("TxtHint").innerHTML=this.responseText;
+				}
+			};
+
+			xmlhttp.open("GET","display.php?id="+id,true);
+			xmlhttp.send();
+		}
+	</script> -->
 </head>
 <!-- breadcrumbs -->
 <div class="w3l_agileits_breadcrumbs">
@@ -97,7 +110,7 @@
 				</div> -->
 				<div class="w3_form_body_grid">
 					<span>religion</span>
-					<select id="w3_country1" onchange="change_country(this.value)" class="frm-field required" name="Religion">
+					<select id="w3_country1" class="frm-field required" name="Religion" onchange="showCourse(this.value)">
 						<option value="Hindu">Hindu</option>
 						<option value="Muslim">Muslim</option>
 						<option value="Christian">Christian</option>
@@ -107,6 +120,10 @@
 						<option value="No Religious Belief">No Religious Belief</option>
 					</select>
 				</div>
+				<!-- <div class="w3_form_body_grid w3_form_body_grid1">
+					<span>Caste</span>
+					<input type="text" name="Country" placeholder="Castes" required="" id="TxtHint">
+				</div> -->
 				<div class="w3_form_body_grid w3_form_body_grid1">
 					<span>Country</span>
 					<input type="text" name="Country" placeholder="Country" required="">
@@ -158,10 +175,12 @@
 			<h3 align=center> Charges : 8000 &#8377;</h3>
 			<h4 align=center>Duration : 3 Years</h4>
 			<ul>
-				<li><i class="fa fa-check" aria-hidden="true"></i>Lorem ipsum</li>
-				<li><i class="fa fa-check" aria-hidden="true"></i>Vivamus lacus</li>
-				<li><i class="fa fa-check" aria-hidden="true"></i>quisquam est</li>
-				<li><i class="fa fa-check" aria-hidden="true"></i>Pellentesque</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Higher visibility in search results</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Unlimited profile views</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Direct contact with more profiles</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Priority customer support</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Extended privacy options</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Personalized match recommendations</li>
 			</ul>
 			<h5>Already a member....<i class="fa fa-hand-o-down" aria-hidden="true"></i></h5>
 			<div class="sim-button button12"><a href="login.php">Login</a></div>
@@ -171,10 +190,12 @@
 			<h3 align=center>Charges : 5000 &#8377;</h3>
 			<h4 align=center>Duration : 2 Years</h4>
 			<ul>
-				<li><i class="fa fa-check" aria-hidden="true"></i>Lorem ipsum</li>
-				<li><i class="fa fa-check" aria-hidden="true"></i>Vivamus lacus</li>
-				<li><i class="fa fa-check" aria-hidden="true"></i>quisquam est</li>
-				<li><i class="fa fa-check" aria-hidden="true"></i>Pellentesque</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Moderate profile visibility</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Limited profile views</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Limited direct contact</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Standard customer support</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Access to all profiles</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Basic match recommendations</li>
 			</ul>
 			<h5>Already a member....<i class="fa fa-hand-o-down" aria-hidden="true"></i></h5>
 			<div class="sim-button button12"><a href="login.php">Login</a></div>

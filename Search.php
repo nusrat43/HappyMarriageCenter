@@ -1,5 +1,5 @@
 <head>
-    <title> About :: HappyMarriageCenter</title>
+    <title> Search :: HappyMarriageCenter</title>
 
 
     <?php
@@ -211,7 +211,7 @@ if (isset($_POST['Religion']) || isset($_POST['caste']) || isset($_POST['city'])
 
     // City is optional and is included if provided
     if ($city != "") {
-        $sql .= " OR city='$city'";
+        $sql .= " AND city='$city'";
     }
 
     // Echo SQL for debugging

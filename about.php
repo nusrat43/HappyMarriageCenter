@@ -56,7 +56,7 @@
 		</div>
 		<div class="team-row">
 			<div class="col-md-3 w3ls-team-grids">
-				<h5>Clare</h5>
+				<h5>Aamir Junaid Ahmad </h5>
 				<p>Lorem ipsum dolor sit amet, consectetur adipi est eligendi scing elit consectetur.</p>
 				<div class="agileits-social">
 					<ul>
@@ -66,11 +66,11 @@
 					</ul>
 				</div>
 				<div class="team-img">
-					<img src="images/team1.jpg" alt="">
+					<img src="images/Mr. Aamir Junaid Ahmad.png" alt="">
 				</div>
 			</div>
 			<div class="col-md-3 w3ls-team-grids team-mdl">
-				<h5>Abelard</h5>
+				<h5>Mr. Ashfi</h5>
 				<p>Lorem ipsum dolor sit amet, consectetur adipi est eligendi scing elit consectetur.</p>
 				<div class="agileits-social">
 					<ul>
@@ -80,11 +80,11 @@
 					</ul>
 				</div>
 				<div class="team-img">
-					<img src="images/team2.jpg" alt="">
+					<img src="images/Mr. Ashfi.jpeg" alt="">
 				</div>
 			</div>
 			<div class="col-md-3 w3ls-team-grids team-mdl1">
-				<h5>Daniel jack</h5>
+				<h5>Mr. Zaid Alam</h5>
 				<p>Lorem ipsum dolor sit amet, consectetur adipi est eligendi scing elit consectetur.</p>
 				<div class="agileits-social">
 					<ul>
@@ -94,7 +94,7 @@
 					</ul>
 				</div>
 				<div class="team-img">
-					<img src="images/team4.jpg" alt="">
+					<img src="images/Mr. Zaid.jpg" alt="">
 				</div>
 			</div>
 			<div class="col-md-3 w3ls-team-grids">
